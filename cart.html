@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Swaras - Your Cart</title>
+    <link rel="stylesheet" href="css/ecommerce.css">
+    <style>
+        /* Basic styles for cart page - move to ecommerce.css later */
+        .cart-container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px dashed #eee;
+        }
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+        .cart-item-details {
+            flex-grow: 1;
+        }
+        .cart-item-details h3 {
+            margin: 0 0 5px 0;
+        }
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .quantity-btn, .remove-btn {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            cursor: pointer;
+        }
+        .remove-btn {
+            background-color: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            padding: 5px;
+        }
+        #cart-summary {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            text-align: right;
+        }
+        #proceed-to-checkout-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Urban Swaras</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="cart.html">Cart (<span id="cart-counter">0</span>)</a>
+            </nav>
+    </header>
+
+    <main>
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-container">
+            <div id="cart-items">
+                </div>
+            <div id="cart-summary">
+                </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Urban Swaras</p>
+    </footer>
+
+    <script src="js/zoho-token-exchange.js"></script>
+    <script src="js/shopping-cart.js"></script>
+    <script>
+        // No specific script needed here other than loading shopping-cart.js
+        // The DOMContentLoaded listener in shopping-cart.js will handle rendering.
+    </script>
+</body>
+</html>

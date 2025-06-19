@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Swaras - Products</title>
+    <link rel="stylesheet" href="css/ecommerce.css">
+    <style>
+        /* Basic styles for product grid - move to ecommerce.css later */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            border: 1px solid #eee;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .product-card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Urban Swaras</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="cart.html">Cart (<span id="cart-counter">0</span>)</a>
+            </nav>
+    </header>
+
+    <main>
+        <h2>Our Products</h2>
+        <div id="loading-spinner" style="display: none; text-align: center;">Loading products...</div>
+        <div id="product-list" class="product-grid">
+            </div>
+        <div id="error-message" style="color: red; text-align: center;"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Urban Swaras</p>
+    </footer>
+
+    <script src="js/zoho-token-exchange.js"></script>
+    <script src="js/shopping-cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const productListDiv = document.getElementById('product-list');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const errorMessage = document.getElementById('error-message');
+
+            loadingSpinner.style.display = 'block';
+            errorMessage.textContent = '';
+            productListDiv.innerHTML = '';
+
+            try {
+                // Call the corrected getStorefrontProducts
+                const products = await getStorefrontProducts(); // No search query for now
+
+                if (products.length > 0) {
+                    products.forEach(product => {
+                        const productCard = document.createElement('div');
+                        productCard.classList.add('product-card');
+                        
+                        // Pick the first variant's ID if available, otherwise just use product ID (less ideal)
+                        const variantId = product.variants && product.variants.length > 0 ? product.variants[0].variant_id : product.product_id;
+                        const imageUrl = product.images && product.images.length > 0 ? product.images[0].url : 'https://via.placeholder.com/200'; // Placeholder
+                        
+                        productCard.innerHTML = `
+                            <img src="${ZOHO_CONFIG.api_domain}${imageUrl}" alt="${product.name}">
+                            <h3>${product.name}</h3>
+                            <p>Price: ${product.symbol_formatted ? `${product.symbol_formatted}${product.selling_price.toFixed(2)}` : `$${product.selling_price.toFixed(2)}`}</p>
+                            <button class="add-to-cart-btn" data-variant-id="${variantId}">Add to Cart</button>
+                        `;
+                        productListDiv.appendChild(productCard);
+                    });
+
+                    // Add event listeners for "Add to Cart" buttons
+                    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                        button.addEventListener('click', (event) => {
+                            const variantId = event.target.dataset.variantId;
+                            handleAddToCart(variantId, 1); // Add 1 quantity by default
+                        });
+                    });
+
+                } else {
+                    productListDiv.innerHTML = '<p>No products found.</p>';
+                }
+            } catch (error) {
+                console.error("Error displaying products:", error);
+                errorMessage.textContent = 'Failed to load products. Please try again later.';
+            } finally {
+                loadingSpinner.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

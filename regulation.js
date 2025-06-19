@@ -1,0 +1,411 @@
+ // Mobile menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+        
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            mobileOverlay.classList.add('active');
+            hamburger.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Event listeners
+        hamburger.addEventListener('click', openMobileMenu);
+        closeMenu.addEventListener('click', closeMobileMenu);
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Active page highlighting (simulate)
+        function setActivePage() {
+            const currentPage = window.location.pathname;
+            const navItems = document.querySelectorAll('.nav-item, .mobile-item');
+            
+            navItems.forEach(item => {
+                const link = item.querySelector('a');
+                if (link && link.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.querySelector('.main-header');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                header.classList.add('scrolled-down');
+            } else {
+                header.classList.remove('scrolled-down');
+            }
+            
+            if (scrollTop > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+
+ // Scroll animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with scroll-animation class
+        document.querySelectorAll('.scroll-animation').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add stagger effect to committee members
+        document.addEventListener('DOMContentLoaded', function() {
+            const committeeMembers = document.querySelectorAll('.committee-member');
+            committeeMembers.forEach((member, index) => {
+                member.style.animationDelay = `${index * 0.1}s`;
+            });
+
+            const creMembers = document.querySelectorAll('.cre-member');
+            creMembers.forEach((member, index) => {
+                member.style.animationDelay = `${index * 0.05}s`;
+            });
+        });
+
+        // Smooth scroll for document links (when real links are added)
+        document.querySelectorAll('.document-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Add actual link functionality here when documents are ready
+                console.log('Document link clicked:', this.previousElementSibling.textContent);
+            });
+        });
+
+        // Add subtle parallax effect to floating icons
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelectorAll('.floating-icon');
+            
+            parallax.forEach((icon, index) => {
+                const speed = 0.5 + (index * 0.1);
+                const yPos = -(scrolled * speed);
+                icon.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.01}deg)`;
+            });
+        });
+
+// Urban Swaras Organogram Interactive Features
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Add interactive tooltips and enhanced hover effects
+    const orgCards = document.querySelectorAll('.org-card');
+    
+    // Enhanced card interactions
+    orgCards.forEach(card => {
+        // Add ripple effect on click
+        card.addEventListener('click', function(e) {
+            createRippleEffect(e, this);
+            showPositionDetails(this);
+        });
+        
+        // Enhanced hover effects
+        card.addEventListener('mouseenter', function() {
+            this.classList.add('card-hover');
+            addGlowEffect(this);
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.classList.remove('card-hover');
+            removeGlowEffect(this);
+        });
+    });
+    
+    // Scroll-triggered animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                animateConnectionLines();
+            }
+        });
+    }, observerOptions);
+    
+    // Observe the organogram container
+    const organogramContainer = document.querySelector('.organogram-container');
+    if (organogramContainer) {
+        observer.observe(organogramContainer);
+    }
+    
+    // Initialize responsive behavior
+    handleResponsiveLayout();
+    window.addEventListener('resize', debounce(handleResponsiveLayout, 250));
+});
+
+// Create ripple effect on card click
+function createRippleEffect(event, element) {
+    const rect = element.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    
+    const ripple = document.createElement('div');
+    ripple.className = 'ripple-effect';
+    ripple.style.cssText = `
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+        left: ${x - 2}px;
+        top: ${y - 2}px;
+        pointer-events: none;
+        z-index: 1000;
+    `;
+    
+    // Add ripple animation keyframes if not already added
+    if (!document.querySelector('#ripple-styles')) {
+        const style = document.createElement('style');
+        style.id = 'ripple-styles';
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(40);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    element.style.position = 'relative';
+    element.style.overflow = 'hidden';
+    element.appendChild(ripple);
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+}
+
+// Show position details (could be expanded to show modal or tooltip)
+function showPositionDetails(card) {
+    const position = card.dataset.position;
+    const positionTitle = card.querySelector('.position-title').textContent;
+    const positionName = card.querySelector('.position-name').textContent;
+    
+    // Create a subtle notification
+    showNotification(`${positionTitle}: ${positionName}`, position);
+}
+
+// Show notification
+function showNotification(message, type) {
+    // Remove existing notifications
+    const existing = document.querySelector('.position-notification');
+    if (existing) {
+        existing.remove();
+    }
+    
+    const notification = document.createElement('div');
+    notification.className = 'position-notification';
+    notification.textContent = message;
+    
+    const colors = {
+        patron: 'var(--primary)',
+        chairperson: 'var(--secondary)',
+        secretary: 'var(--accent)',
+        'trail-king': 'var(--accent)',
+        cre: 'var(--accent)',
+        treasurer: 'var(--accent)'
+    };
+    
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${colors[type] || 'var(--primary)'};
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 10000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        max-width: 300px;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    requestAnimationFrame(() => {
+        notification.style.transform = 'translateX(0)';
+    });
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 3000);
+}
+
+// Add glow effect on hover
+function addGlowEffect(element) {
+    const isLeadership = element.classList.contains('patron-card') || 
+                        element.classList.contains('chairperson-card');
+    
+    const glowColor = isLeadership ? 'rgba(245, 124, 81, 0.4)' : 'rgba(107, 162, 217, 0.4)';
+    
+    element.style.boxShadow = `
+        0 15px 40px rgba(0, 0, 0, 0.15),
+        0 0 20px ${glowColor}
+    `;
+}
+
+// Remove glow effect
+function removeGlowEffect(element) {
+    element.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.1)';
+}
+
+// Animate connection lines
+function animateConnectionLines() {
+    const lines = document.querySelectorAll('.vertical-line, .horizontal-line, .branch-line');
+    
+    lines.forEach((line, index) => {
+        line.style.opacity = '0';
+        line.style.transform = line.classList.contains('horizontal-line') ? 
+                              'scaleX(0)' : 'scaleY(0)';
+        
+        setTimeout(() => {
+            line.style.transition = 'all 0.6s ease';
+            line.style.opacity = '1';
+            line.style.transform = 'scale(1)';
+        }, index * 150);
+    });
+}
+
+// Handle responsive layout
+function handleResponsiveLayout() {
+    const container = document.querySelector('.organogram-container');
+    const committeeLevel = document.querySelector('.committee-level');
+    const windowWidth = window.innerWidth;
+    
+    if (windowWidth <= 768) {
+        // Mobile layout adjustments
+        if (committeeLevel) {
+            committeeLevel.style.gridTemplateColumns = '1fr';
+        }
+        
+        // Adjust connection lines for mobile
+        const horizontalLine = document.querySelector('.horizontal-line');
+        const verticalBranches = document.querySelector('.vertical-branches');
+        
+        if (horizontalLine) horizontalLine.style.width = '90%';
+        if (verticalBranches) verticalBranches.style.width = '90%';
+        
+    } else if (windowWidth <= 1024) {
+        // Tablet layout adjustments
+        if (committeeLevel) {
+            committeeLevel.style.gridTemplateColumns = 'repeat(2, 1fr)';
+        }
+    } else {
+        // Desktop layout
+        if (committeeLevel) {
+            committeeLevel.style.gridTemplateColumns = 'repeat(auto-fit, minmax(220px, 1fr))';
+        }
+    }
+}
+
+// Performance optimization: Debounce function
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function executedFunction() {
+        const context = this;
+        const args = arguments;
+        const later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+// Keyboard accessibility
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        const focusedCard = document.querySelector('.org-card:focus');
+        if (focusedCard) {
+            e.preventDefault();
+            focusedCard.click();
+        }
+    }
+});
+
+// Add focus styles for keyboard navigation
+const style = document.createElement('style');
+style.textContent = `
+    .org-card:focus {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+    }
+    
+    .org-card {
+        cursor: pointer;
+        tabindex: 0;
+    }
+`;
+document.head.appendChild(style);

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Swaras</title>
+    <link rel="stylesheet" href="stories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        
+</head>
+ 
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="next-event">
+            <span>Next event:</span> USRC June Celebration Run @ The Berra Lounge Hotel, Ngong  Saturday, June 14th, 2025
+        </div>
+        <div class="contact-social">
+            <div class="phone">
+                <i class="fas fa-phone"></i> +254740894117
+            </div>
+            <div class="social-icons">
+                <a href="https://www.strava.com/clubs/244473" title="Strava"><i class="fab fa-strava"></i></a>
+                <a href="https://connect.garmin.com/modern/group/18200" title="Garmin"><i class="fas fa-running"></i></a>
+                <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/urbanswaras" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
+               
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calendar.html" class="nav-link">
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="regulation.html" class="nav-link">
+                            <span>Governance</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="members.html" class="nav-link">
+                            <span>Membership</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="data.html" class="nav-link">
+                            <span>Downloads</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="stories.html" class="nav-link">
+                            <span>Our Stories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://www.urbanswaras.co.ke/" class="nav-link" target="_blank" rel="noopener noreferrer">
+                        <span>Duka La Swara</span>
+                      </a>
+                    </li> 
+                </ul>
+            </nav>
+            
+            <div class="header-actions"> 
+                
+                <button class="hamburger" id="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <h3>Menu</h3>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav">
+                <ul class="mobile-links">
+                    <li class="mobile-item active">
+                        <a href="index.html" class="mobile-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="calendar.html" class="mobile-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="regulation.html" class="mobile-link">
+                            <i class="fas fa-gavel"></i>
+                            <span>Governance</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="members.html" class="mobile-link">
+                            <i class="fas fa-users"></i>
+                            <span>Membership</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="data.html" class="mobile-link">
+                            <i class="fas fa-download"></i>
+                            <span>Downloads</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="contact.html" class="mobile-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="stories.html" class="mobile-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Our Stories</span> 
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="mobile-cta">
+                    <button class="mobile-cta-button">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Become a Member</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+  <style>
+        :root {
+            --primary: #1F3C5F;
+            --secondary: #6BA2D9;
+            --accent: #F57C51;
+            --text: #333333;
+            --light-bg: #F5F5F5;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+           background: url('https://images.unsplash.com/photo-1544717440-c7b1ad3abfd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(31, 60, 95, 0.8) 0%, rgba(107, 162, 217, 0.6) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .story-content {
+            color: var(--white);
+        }
+
+        .story-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .story-date {
+            background: var(--accent);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .story-author {
+            font-style: italic;
+        }
+
+        .story-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--white), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideInLeft 1s ease-out 0.3s both;
+        }
+
+        .story-excerpt {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: slideInLeft 1s ease-out 0.6s both;
+        }
+
+        .story-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            animation: slideInLeft 1s ease-out 0.9s both;
+        }
+
+        .tag {
+            background: rgba(245, 124, 81, 0.2);
+            border: 1px solid var(--accent);
+            color: var(--white);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(245, 124, 81, 0.4);
+        }
+
+        .story-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            animation: slideInLeft 1s ease-out 1.2s both;
+        }
+
+        .read-story-btn {
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 20px rgba(245, 124, 81, 0.3);
+        }
+
+        .read-story-btn:hover {
+            background: #e66a3d;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(245, 124, 81, 0.5);
+        }
+
+        .read-story-btn::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .read-story-btn:hover::after {
+            transform: translateX(5px);
+        }
+
+        .social-share {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-btn:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .story-image-container {
+            position: relative;
+            animation: slideInRight 1s ease-out 0.5s both;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease;
+        }
+
+        .story-image:hover {
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(31, 60, 95, 0.8));
+            padding: 2rem;
+            border-radius: 0 0 20px 20px;
+            color: var(--white);
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-arrow {
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--white);
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg);
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .story-image {
+                height: 350px;
+            }
+
+            .story-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+            }
+
+            .story-excerpt {
+                font-size: 1.1rem;
+            }
+
+            .story-actions {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-content {
+                padding: 1rem;
+            }
+
+            .story-image {
+                height: 300px;
+            }
+
+            .story-excerpt {
+                font-size: 1rem;
+            }
+
+            .read-story-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .social-share {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-element">🏃‍♂️</div>
+        <div class="floating-element">✈️</div>
+        <div class="floating-element">🏃‍♀️</div>
+        
+        <div class="hero-content">
+            <div class="story-content">
+                <div class="story-meta">
+                    <span class="story-date">Global Running Day 2024</span>
+                    <span class="story-author">by Urban Swaras Team</span>
+                </div>
+                
+                <h1 class="story-title">Running With the Swara Engineer Who Fixes AngryBirds</h1>
+                
+                <p class="story-excerpt">
+                    I have this friend—let's call him Omondi because that's his name. But you can also call him The Guy Who Talks to Planes. Not metaphorically. The man speaks hydraulics, breathes avionics, and dreams in engine diagrams. But that's not why you're here...
+                </p>
+                
+                <div class="story-tags">
+                    <span class="tag">#UrbanSwaras</span>
+                    <span class="tag">#GlobalRunningDaysWithSwaras</span>
+                    <span class="tag">#RunningIsLiving</span>
+                    <span class="tag">#WeEngineerTrails</span>
+                </div>
+                
+                <div class="story-actions">
+                    <button class="read-story-btn" onclick="readFullStory()">Read Full Story</button>
+                    <div class="social-share">
+                        <a href="#" class="social-btn" onclick="shareOnTwitter()">📱</a>
+                        <a href="#" class="social-btn" onclick="shareOnFacebook()">📘</a>
+                        <a href="#" class="social-btn" onclick="shareOnWhatsApp()">💬</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="story-image-container">
+                <img src="documents/Downloads/stories.jpg" alt="Urban Swaras Runner" class="story-image">
+                <div class="image-overlay">
+                    <p class="image-caption">Engineer Omondi at Nairobi Jaffery Sports Club - 5:00 AM Time Trial</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <script>
+        // Interactive functionality
+          function readFullStory() {
+           // Create full story modal or expand content
+    const fullStoryContent = `
+        <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(31, 60, 95, 0.95); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+            <div style="background: white; padding: 2rem; border-radius: 15px; max-width: 800px; max-height: 80vh; overflow-y: auto; position: relative;">
+                <button onclick="this.parentElement.parentElement.remove()" style="position: absolute; top: 1rem; right: 1rem; background: #F57C51; color: white; border: none; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer;">Close</button>
+                <h2 style="color: #1F3C5F; margin-bottom: 1rem;">Running With the Swara Engineer Who Fixes AngryBirds</h2>
+                <div style="line-height: 1.6; color: #333;">
+                    ${document.querySelector('.story-excerpt').textContent}
+                    <br><br>
+                    <p>So we lace up and hit the Ngong Forest Sanctuary. Two laps of the 5K route. Trees watching us like old uncles. We finish in one piece—thank you Strava, you digital witness of pain. If it's not on Strava, did you even suffer?</p>
+                    <p>Afterwards, he's like, "Let me know when you want another round."</p>
+                    <p>Fast forward. It's Global Running Day. I check Coach's notes and boom: 10K Time Trial.</p>
+                    <p>Who do I call? The man who converts free time into running sessions.</p>
+                    <br>
+                    <p><strong>So here we are:</strong><br>
+                    Location: Nairobi Jaffery Sports Club<br>
+                    Time: 5:00 AM — aka before Nairobi wakes up and remembers it's tired.<br>
+                    Mission: 10KM Time Trial<br>
+                    Coach: Dedan Miricho<br>
+                    Comrade: Engineer Omondi — runner, friend, fixer of planes and paces.</p>
+                    <br>
+                    <p>Happy Global Running Day, fellow runners. May your legs be fast and your GPS accurate.</p>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', fullStoryContent);
+                        }
+
+
+        function shareOnTwitter() {
+            const text = "Check out this amazing story from Urban Swaras Running Club! 🏃‍♂️ #UrbanSwaras #RunningIsLiving";
+            const url = window.location.href;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = window.location.href;
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const text = "Check out this amazing story from Urban Swaras Running Club! 🏃‍♂️";
+            const url = window.location.href;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+        }
+
+        // Add scroll-triggered animations
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBackground = document.querySelector('.hero-background');
+            if (heroBackground) {
+                heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add intersection observer for enhanced animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe animated elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.story-title, .story-excerpt, .story-tags, .story-actions, .story-image-container');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+     <section class="media-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Media Coverage</div>
+                <h2 class="section-title">Urban Swaras in the News</h2>
+                <p class="section-description">
+                    See how Urban Swaras Running Club is making headlines and inspiring the running community across Kenya and beyond.
+                </p>
+            </div>
+
+            <div class="media-grid">
+                <article class="media-card">
+                    <div class="featured-badge">Featured</div>
+                    <div class="card-header">
+                        <div class="publication-logo">
+                            <div class="logo-icon">BD</div>
+                            <div class="publication-name">Business Daily Africa</div>
+                            <div class="publication-date">2023</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="article-title">Urban Swaras: A Running Club Changing Lives</h3>
+                        <p class="article-description">
+                            Discover how Urban Swaras Running Club has transformed from a small group of running enthusiasts into a community that's changing lives across Nairobi.
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/urban-swaras-a-running-club-changing-lives--2243486" target="_blank" class="read-article-btn">
+                                Read Article
+                            </a>
+                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="media-card">
+                    <div class="card-header">
+                        <div class="publication-logo">
+                            <div class="logo-icon">BD</div>
+                            <div class="publication-name">Business Daily Africa</div>
+                            <div class="publication-date">2023</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="article-title">The Running Clubs Taking Over Nairobi</h3>
+                        <p class="article-description">
+                            An in-depth look at how running clubs like Urban Swaras are revolutionizing fitness culture and community building in Nairobi.
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/the-running-clubs-taking-over-nairobi-3865094" target="_blank" class="read-article-btn">
+                                Read Article
+                            </a>
+                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="media-card">
+                    <div class="card-header">
+                        <div class="publication-logo">
+                            <div class="logo-icon">BD</div>
+                            <div class="publication-name">Business Daily Africa</div>
+                            <div class="publication-date">2023</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="article-title">Meet the Marathoner Behind Viceroy Success</h3>
+                        <p class="article-description">
+                            A profile of one of Urban Swaras' standout athletes and their journey to marathon success with the support of the running community.
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/meet-the-marathoner-behind-viceroy-success--2071684" target="_blank" class="read-article-btn">
+                                Read Article
+                            </a>
+                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="media-card">
+                    <div class="card-header">
+                        <div class="publication-logo">
+                            <div class="logo-icon">BD</div>
+                            <div class="publication-name">Business Daily Africa</div>
+                            <div class="publication-date">2023</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="article-title">Victor Kamau's Nine-Year Ultra Run Addiction</h3>
+                        <p class="article-description">
+                            Follow the incredible ultra-running journey of Victor Kamau, a dedicated member of the Urban Swaras community and his passion for long-distance running.
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/victor-kamau-s-nine-year-ultra-run-addiction--4514092" target="_blank" class="read-article-btn">
+                                Read Article
+                            </a>
+                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="media-card">
+                    <div class="card-header">
+                        <div class="publication-logo">
+                            <div class="logo-icon">BD</div>
+                            <div class="publication-name">Business Daily Africa</div>
+                            <div class="publication-date">2022</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="article-title">Touring Kenya Through the Sporting Calendar</h3>
+                        <p class="article-description">
+                            Explore how Urban Swaras and other running clubs contribute to Kenya's vibrant sporting culture and tourism through organized running events.
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/touring-kenya-through-the-sporting-calendar--2044200" target="_blank" class="read-article-btn">
+                                Read Article
+                            </a>
+                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="5">5+</div>
+                        <div class="stat-label">Media Features</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="3">3</div>
+                        <div class="stat-label">Years in Spotlight</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="1000">1000+</div>
+                        <div class="stat-label">Readers Reached</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">50+</div>
+                        <div class="stat-label">Stories Shared</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta-section">
+        <div class="cta-background"></div>
+        <div class="cta-overlay"></div>
+        
+        <!-- Floating Runners -->
+        <div class="floating-runners">🏃‍♂️</div>
+        <div class="floating-runners">🏃‍♀️</div>
+        <div class="floating-runners">🏃</div>
+        <div class="floating-runners">🏃‍♂️</div>
+        
+        <div class="cta-container">
+            <div class="cta-header">
+                <span class="cta-badge">Join the Movement</span>
+                <h2 class="cta-title">Share Your Running Story</h2>
+                <p class="cta-subtitle">
+                    Every runner has a story. Every mile has a memory. Your journey could inspire the next Urban Swara to lace up and hit the trails.
+                </p>
+            </div>
+
+            <div class="story-types">
+                <div class="story-type-card" onclick="selectStoryType('race')">
+                    <span class="story-icon">🏆</span>
+                    <h3 class="story-type-title">Race Recaps</h3>
+                    <p class="story-type-desc">Share your marathon conquests, trail adventures, or that first 5K breakthrough moment</p>
+                </div>
+                
+                <div class="story-type-card" onclick="selectStoryType('training')">
+                    <span class="story-icon">💪</span>
+                    <h3 class="story-type-title">Training Tales</h3>
+                    <p class="story-type-desc">From dawn workouts to coach wisdom, tell us about your training journey</p>
+                </div>
+                
+                <div class="story-type-card" onclick="selectStoryType('community')">
+                    <span class="story-icon">👥</span>
+                    <h3 class="story-type-title">Community Chronicles</h3>
+                    <p class="story-type-desc">The friendships forged, the support found, the Urban Swaras family moments</p>
+                </div>
+                
+                <div class="story-type-card" onclick="selectStoryType('transformation')">
+                    <span class="story-icon">✨</span>
+                    <h3 class="story-type-title">Transformation Stories</h3>
+                    <p class="story-type-desc">How running changed your life, health, mindset, or perspective</p>
+                </div>
+            </div>
+ 
+                
+                <div class="contact-options">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>info@urbanswaras.co.ke</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>WhatsApp: +254740894117</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📝</span>
+                        <span>500-1500 words preferred</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="community-hashtags">
+                <p class="hashtag-title">Join the conversation:</p>
+                <div class="hashtags">
+                    <span class="hashtag" onclick="copyHashtag(this)">#UrbanSwaras</span>
+                    <span class="hashtag" onclick="copyHashtag(this)">#RunningIsLiving</span>
+                    <span class="hashtag" onclick="copyHashtag(this)">#SwarasStories</span>
+                    <span class="hashtag" onclick="copyHashtag(this)">#NairobiRunners</span>
+                    <span class="hashtag" onclick="copyHashtag(this)">#RunWithUs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Submission Modal -->
+    <div class="modal" id="storyModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeStoryModal()">×</button>
+            <h3 class="modal-title">Share Your Story</h3>
+            <form id="storyForm" action="https://formspree.io/f/urbanswaras@gmail.com" method="POST" onsubmit="submitStory(event)">
+                <div class="form-group">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" class="form-input" name="name" required placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" name="email" required placeholder="your.email@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Story Title</label>
+                    <input type="text" class="form-input" name="title" required placeholder="Give your story a catchy title">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Story Type</label>
+                    <select class="form-input" name="type" required>
+                        <option value="">Select story type</option>
+                        <option value="race">Race Recap</option>
+                        <option value="training">Training Tale</option>
+                        <option value="community">Community Chronicle</option>
+                        <option value="transformation">Transformation Story</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Your Story</label>
+                    <textarea class="form-textarea" name="story" required placeholder="Tell us your story... What happened? How did it feel? What did you learn? Make it vivid, make it real, make it yours."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Tags (optional)</label>
+                    <input type="text" class="form-input" name="tags" placeholder="marathon, trail, 5K, first-time, etc. (comma separated)">
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit My Story 🚀</button>
+            </form>
+        </div>
+    </div>
+
+ 
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Urban Swaras</h3>
+            <p class="footer-about">Nairobi's premier running community since 2006. Promoting recreational running and building friendships through shared miles.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Strava"><i class="fab fa-strava"></i></a>
+                <a href="#" aria-label="Garmin"><i class="fas fa-running"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Events</a></li>
+                <li><a href="regulation.html">Governance</a></li>
+                <li><a href="members.html">Membership</a></li>
+                <li><a href="data.html">Downloads</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Contact Us</h3>
+            <ul class="footer-contact">
+                <li><i class="fas fa-phone-alt"></i> +254740894117</li>
+                <li><i class="fas fa-envelope"></i> urbanswarasrunningclub@gmail.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+                <li><i class="fas fa-clock"></i> Runs every Saturday 6:30 AM</li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Stay Updated</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="footer-notes">Get notified about upcoming runs and events.</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Urban Swaras Running Club. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="data.html">Privacy Policy</a>
+            <a href="regulation.html">Terms of Use</a>
+        </div>
+    </div>
+</footer> 
+<script src="stories.js"></script>

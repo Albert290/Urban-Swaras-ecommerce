@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Swaras</title>
+    <link rel="stylesheet" href="members.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="next-event">
+            <span>Next event:</span> <span>Next event:</span> USRC June Celebration Run @ The Berra Lounge Hotel, Ngong  Saturday, June 14th, 2025
+        </div>
+        <div class="contact-social">
+            <div class="phone">
+                <i class="fas fa-phone"></i> +254740894117
+            </div>
+            <div class="social-icons">
+                <a href="https://www.strava.com/clubs/244473" title="Strava"><i class="fab fa-strava"></i></a>
+                <a href="https://connect.garmin.com/modern/group/18200" title="Garmin"><i class="fas fa-running"></i></a>
+                <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/urbanswaras" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+    
+   <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
+               
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calendar.html" class="nav-link">
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="regulation.html" class="nav-link">
+                            <span>Governance</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="members.html" class="nav-link">
+                            <span>Membership</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="data.html" class="nav-link">
+                            <span>Downloads</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="stories.html" class="nav-link">
+                            <span>Our Stories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.urbanswaras.co.ke/" class="nav-link">
+                            <span>Duka La Swara</span>
+                        </a>
+                    </li> 
+                </ul>
+            </nav>
+            
+            <div class="header-actions"> 
+                
+                <button class="hamburger" id="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <h3>Menu</h3>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav">
+                <ul class="mobile-links">
+                    <li class="mobile-item ">
+                        <a href="index.html" class="mobile-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="calendar.html" class="mobile-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="regulation.html" class="mobile-link">
+                            <i class="fas fa-gavel"></i>
+                            <span>Governance</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item active">
+                        <a href="members.html" class="mobile-link">
+                            <i class="fas fa-users"></i>
+                            <span>Membership</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="data.html" class="mobile-link">
+                            <i class="fas fa-download"></i>
+                            <span>Downloads</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="contact.html" class="mobile-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                      <a href="https://www.urbanswaras.co.ke/" class="nav-link" target="_blank" rel="noopener noreferrer">
+                        <span>Duka La Swara</span>
+                      </a>
+                    </li>
+                </ul>
+                
+                <div class="mobile-cta">
+                    <button class="mobile-cta-button">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Become a Member</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+     <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Become Part of Urban Swaras</h1>
+            <p class="hero-subtitle">A community where Running is Living</p>
+            <div class="pulse-effect"></div>
+        </div>
+        <div class="running-icons">
+            <i class="fas fa-running runner-1"></i>
+            <i class="fas fa-running runner-2"></i>
+            <i class="fas fa-running runner-3"></i>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="content-card">
+                <h2>Join Our Running Family</h2>
+                <p>Anyone can join Urban Swaras Running Club! We're mixed ability, from absolute beginners to junior elites. We have members who are still finding their feet on a 10km run around town, to those who are placing top ten in international marathons.</p>
+                <p>To join, come along to one of our runs and see if you like it. For information about upcoming runs, see our <a href="https://lu.ma/user/Urbanswaras" target="_blank" class="link-highlight">calendar</a>, or contact us.</p>
+            </div>
+        </section>
+
+        <!-- Membership Types -->
+        <section class="membership-types">
+            <h2 class="section-title">Types of Membership</h2>
+            
+            <div class="membership-grid">
+                <!-- Quarterly Membership -->
+                <div class="membership-card quarterly-card">
+                    <div class="card-header">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Quarterly Membership</h3>
+                    </div>
+                    <div class="price-display">
+                        <span class="price">Ksh 2,800</span>
+                        <span class="price-breakdown">Ksh 1,800 quarterly + Ksh 1,000 annual renewal</span>
+                    </div>
+                    <div class="membership-details">
+                        <ul>
+                            <li>Quarterly subscriptions of Ksh 1,800</li>
+                            <li>Annual renewal fee of Ksh 1,000</li>
+                            <li>Calendar year quarters (Jan-Apr, May-Jun, July-Sept, Oct-Dec)</li>
+                            <li>One-off annual renewal fee regardless of join month</li>
+                        </ul>
+                    </div>
+                    <button class="join-btn quarterly-btn" onclick="showPaymentInfo('quarterly')">
+                        <i class="fas fa-play"></i> Join Quarterly
+                    </button>
+                </div>
+
+                <!-- Annual Membership -->
+                <div class="membership-card annual-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="card-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>Annual Membership</h3>
+                    </div>
+                    <div class="price-display">
+                        <span class="price">Ksh 8,200</span>
+                        <span class="price-breakdown">Ksh 7,200 subscription + Ksh 1,000 renewal</span>
+                    </div>
+                    <div class="membership-details">
+                        <ul>
+                            <li>Annual subscription of Ksh 7,200</li>
+                            <li>Annual renewal fee of Ksh 1,000</li>
+                            <li>Pro-rated if joining mid-year</li>
+                            <li>Best value for committed runners</li>
+                        </ul>
+                    </div>
+                    <button class="join-btn annual-btn" onclick="showPaymentInfo('annual')">
+                        <i class="fas fa-star"></i> Join Annual
+                    </button>
+                </div>
+
+                <!-- Guest Option -->
+                <div class="membership-card guest-card">
+                    <div class="card-header">
+                        <i class="fas fa-user-friends"></i>
+                        <h3>Guest Runner</h3>
+                    </div>
+                    <div class="price-display">
+                        <span class="price">Ksh 600</span>
+                        <span class="price-breakdown">Per event, pay in advance</span>
+                    </div>
+                    <div class="membership-details">
+                        <ul>
+                            <li>Pay Ksh 600 per event</li>
+                            <li>Same support as members during runs</li>
+                            <li>Water and fruits provided</li>
+                            <li>Limited voting rights</li>
+                        </ul>
+                    </div>
+                    <button class="join-btn guest-btn" onclick="showPaymentInfo('guest')">
+                        <i class="fas fa-ticket-alt"></i> Run as Guest
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Modal -->
+        <div id="paymentModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="modalTitle">Payment Information</h3>
+                <div id="modalBody">
+                    <!-- Payment details will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Member Reviews -->
+        <section class="reviews-section">
+            <h2 class="section-title">Reviews from Our Members</h2>
+            
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="quote-icon">"</div>
+                    <p class="review-text">I joined Urban Swaras earlier this year, just hoping to spice up my running journey. Instead, I found a family that nudged me to be better. Members guided me into structured coaching, better running habits, and deeper discipline.</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">P</div>
+                        <span class="reviewer-name">~ Pascal</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="quote-icon">"</div>
+                    <p class="review-text">When I joined the club, even 21km felt like a struggle. I never thought I could go beyond a half marathon — until a fellow Swara told me I was underrating myself. Seeing others push past limits, I had a wake-up call. Since then, I've run over twenty full marathons and a few ultras. This club has made running my lifestyle.</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">D</div>
+                        <span class="reviewer-name">~ Davis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Opt Out Section -->
+        <section class="opt-out-section">
+            <h2 class="section-title">Opting out as a member</h2>
+            <div class="content-card warning-card">
+                <h3><i class="fas fa-sign-out-alt"></i> Opt Out As A Member</h3>
+                <p>Opting out as a member <strong>MUST</strong> be in writing to the club treasurer. It's important to note that failure to attend runs (due to injury, travel, or other reasons) does not constitute suspension of membership.</p>
+                <div class="contact-info">
+                    <p>To opt out, email: <a href="mailto:treasurer@urbanswaras.co.ke?subject=Membership Opt Out Request&body=Please include:%0A- Full Names:%0A- Phone Number:%0A- Email Address:%0A- Reason for opting out:" class="email-link">treasurer@urbanswaras.co.ke</a></p>
+                    <small>Include: Full Names, Phone Number, Email Address</small>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer CTA -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Join hundreds of runners who've made Urban Swaras their running home</p>
+            <button class="cta-btn" onclick="scrollToMembership()">
+                <i class="fas fa-rocket"></i> Choose Your Membership
+            </button>
+        </div>
+    </section>
+ 
+    
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Urban Swaras</h3>
+            <p class="footer-about">Nairobi's premier running community since 2006. Promoting recreational running and building friendships through shared miles.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Strava"><i class="fab fa-strava"></i></a>
+                <a href="#" aria-label="Garmin"><i class="fas fa-running"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Events</a></li>
+                <li><a href="regulation.html">Governance</a></li>
+                <li><a href="members.html">Membership</a></li>
+                <li><a href="data.html">Downloads</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Contact Us</h3>
+            <ul class="footer-contact">
+                <li><i class="fas fa-phone-alt"></i> +254740894117</li>
+                <li><i class="fas fa-envelope"></i> urbanswarasrunningclub@gmail.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+                <li><i class="fas fa-clock"></i> Runs every Saturday 6:30 AM</li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Stay Updated</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="footer-notes">Get notified about upcoming runs and events.</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Urban Swaras Running Club. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="data.html">Privacy Policy</a>
+            <a href="regulation.html">Terms of Use</a>
+        </div>
+    </div>
+</footer>
+
+ <script src="members.js"></script>
+<style>
+        /* Brand Colors */
+        :root {
+            --primary: #1F3C5F;
+            --secondary: #6BA2D9;
+            --accent: #F57C51;
+            --text: #333333;
+            --light-bg: #F5F5F5;
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, var(--whatsapp), #20b954);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: var(--white);
+            animation: pulse-whatsapp 2s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(135deg, #20b954, var(--whatsapp));
+        }
+
+        .whatsapp-float i {
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover i {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse-whatsapp {
+            0%, 100% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0.1);
+            }
+        }
+
+        /* WhatsApp Tooltip */
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 75px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(31, 60, 95, 0.3);
+        }
+
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 8px solid transparent;
+            border-left-color: var(--primary);
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) translateX(-10px);
+        }
+
+        /* WhatsApp Header Integration */
+        .whatsapp-header-btn {
+            background: linear-gradient(135deg, var(--whatsapp), #20b954);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-header-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(135deg, #20b954, var(--whatsapp));
+        }
+
+        .whatsapp-header-btn i {
+            font-size: 1.1rem;
+        }
+
+        /* WhatsApp Section Integration */
+        .whatsapp-section {
+            background: linear-gradient(135deg, var(--light-bg), var(--white));
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .whatsapp-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .whatsapp-section h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .whatsapp-section p {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, var(--whatsapp), #20b954);
+            color: var(--white);
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .whatsapp-cta:hover::before {
+            left: 100%;
+        }
+
+        .whatsapp-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(135deg, #20b954, var(--whatsapp));
+        }
+
+        .whatsapp-cta i {
+            font-size: 1.5rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-8px);
+            }
+            60% {
+                transform: translateY(-4px);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .whatsapp-float i {
+                font-size: 1.6rem;
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+
+            .whatsapp-header-btn span {
+                display: none;
+            }
+
+            .whatsapp-header-btn {
+                padding: 10px 12px;
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                justify-content: center;
+            }
+
+            .whatsapp-section h3 {
+                font-size: 1.6rem;
+            }
+
+            .whatsapp-section p {
+                font-size: 1rem;
+            }
+
+            .whatsapp-cta {
+                padding: 15px 25px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Demo body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--light-bg);
+            height: 200vh; /* For demo scrolling */
+        }
+
+        .demo-content {
+            padding: 100px 20px;
+            text-align: center;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body> 
+
+    <!-- Option 3: Floating WhatsApp Button (Always Visible) -->
+    <a href="https://wa.me/254740894117?text=Hi%20Urban%20Swaras!%20I'm%20interested%20in%20learning%20more%20about%20the%20running%20club." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contact us on WhatsApp">
+        <div class="whatsapp-tooltip">Chat with us!</div>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // WhatsApp Analytics Tracking (Optional)
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', function() {
+                // Track WhatsApp clicks
+                console.log('WhatsApp contact initiated');
+                
+                // You can add Google Analytics or other tracking here
+                // gtag('event', 'whatsapp_contact', {
+                //     'event_category': 'contact',
+                //     'event_label': 'whatsapp_click'
+                // });
+            });
+        });
+
+        // Show/hide floating button based on scroll (Optional)
+        let lastScrollTop = 0;
+        const whatsappFloat = document.querySelector('.whatsapp-float');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 300) {
+                whatsappFloat.style.opacity = '1';
+                whatsappFloat.style.visibility = 'visible';
+            } else {
+                whatsappFloat.style.opacity = '0.7';
+            }
+        });
+    </script>
+
+</body>
+</html>

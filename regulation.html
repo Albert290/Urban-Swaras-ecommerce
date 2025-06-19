@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Swaras</title>
+    <link rel="stylesheet" href="regulation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="next-event">
+            <span>Next event:</span> <span>Next event:</span> USRC June Celebration Run @ The Berra Lounge Hotel, Ngong  Saturday, June 14th, 2025
+        </div>
+        <div class="contact-social">
+            <div class="phone">
+                <i class="fas fa-phone"></i> +254740894117
+            </div>
+            <div class="social-icons">
+                <a href="https://www.strava.com/clubs/244473" title="Strava"><i class="fab fa-strava"></i></a>
+                <a href="https://connect.garmin.com/modern/group/18200" title="Garmin"><i class="fas fa-running"></i></a>
+                <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/urbanswaras" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+    
+   <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
+               
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li class="nav-item ">
+                        <a href="index.html" class="nav-link">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calendar.html" class="nav-link">
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="regulation.html" class="nav-link">
+                            <span>Governance</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="members.html" class="nav-link">
+                            <span>Membership</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="data.html" class="nav-link">
+                            <span>Downloads</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="stories.html" class="nav-link">
+                            <span>Our Stories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://www.urbanswaras.co.ke/" class="nav-link" target="_blank" rel="noopener noreferrer">
+                        <span>Duka La Swara</span>
+                      </a>
+                    </li> 
+                </ul>
+            </nav>
+            
+            <div class="header-actions"> 
+                
+                <button class="hamburger" id="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <h3>Menu</h3>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav">
+                <ul class="mobile-links">
+                    <li class="mobile-item ">
+                        <a href="index.html" class="mobile-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="calendar.html" class="mobile-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="regulation.html active" class="mobile-link">
+                            <i class="fas fa-gavel"></i>
+                            <span>Governance</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="members.html" class="mobile-link">
+                            <i class="fas fa-users"></i>
+                            <span>Membership</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="data.html" class="mobile-link">
+                            <i class="fas fa-download"></i>
+                            <span>Downloads</span>
+                        </a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="contact.html" class="mobile-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li> 
+                    
+                    <li class="mobile-item">
+                        <a href="stories.html" class="mobile-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Our Stories</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="mobile-cta">
+                    <button class="mobile-cta-button">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Become a Member</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+      
+
+<style>
+        :root {
+            --primary: #1F3C5F;
+            --secondary: #6BA2D9;
+            --accent: #F57C51;
+            --text: #333333;
+            --light-bg: #F5F5F5;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .governance-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .decorative-line {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        .governance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .governance-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(31, 60, 95, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .governance-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+        }
+
+        .governance-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(31, 60, 95, 0.15);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .card-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text);
+        }
+
+        .committee-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 40px rgba(31, 60, 95, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .committee-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .committee-intro {
+            font-size: 1.2rem;
+            color: var(--text);
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .committee-member {
+            background: linear-gradient(135deg, var(--light-bg), var(--white));
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .committee-member:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            background: var(--white);
+        }
+
+        .member-role {
+            font-size: 1rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .cre-section {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .cre-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cre-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .cre-member {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .cre-member:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .documents-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .document-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(31, 60, 95, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .document-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 45px rgba(245, 124, 81, 0.2);
+        }
+
+        .document-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .document-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .document-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), #ff6b35);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .document-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .document-link:hover::before {
+            left: 100%;
+        }
+
+        .document-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(245, 124, 81, 0.3);
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.05;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .floating-icon:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .floating-icon:nth-child(2) { top: 25%; right: 15%; animation-delay: 3s; }
+        .floating-icon:nth-child(3) { bottom: 35%; left: 8%; animation-delay: 6s; }
+        .floating-icon:nth-child(4) { bottom: 15%; right: 12%; animation-delay: 2s; }
+        .floating-icon:nth-child(5) { top: 50%; left: 5%; animation-delay: 4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(5deg); }
+            50% { transform: translateY(-10px) rotate(-3deg); }
+            75% { transform: translateY(-25px) rotate(3deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .governance-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .page-title {
+                font-size: 2.8rem;
+            }
+
+            .committee-section {
+                padding: 30px;
+            }
+
+            .committee-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .documents-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .governance-container {
+                padding: 20px 15px;
+            }
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .governance-card {
+                padding: 25px;
+            }
+
+            .committee-section {
+                padding: 20px;
+            }
+
+            .committee-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cre-members {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-animation.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-icon">⚖️</div>
+        <div class="floating-icon">🏛️</div>
+        <div class="floating-icon">👥</div>
+        <div class="floating-icon">📋</div>
+        <div class="floating-icon">🗳️</div>
+    </div>
+
+    <div class="governance-container">
+        <div class="page-header scroll-animation"> 
+            <p class="page-subtitle">Transparent Leadership, Democratic Governance, Clear Vision</p>
+            <div class="decorative-line"></div>
+        </div>
+
+        <div class="governance-grid">
+            <div class="governance-card scroll-animation">
+                <span class="card-icon">🎯</span>
+                <h2 class="card-title">Mission Statement</h2>
+                <p class="card-content">
+                    To inspire and support a diverse community of runners by promoting recreational running across Kenya. We aim to foster personal growth, fitness, and friendship through inclusive running experiences — while championing charitable causes that uplift communities and create lasting social impact.
+                </p>
+            </div>
+
+            <div class="governance-card scroll-animation">
+                <span class="card-icon">🌟</span>
+                <h2 class="card-title">Vision Statement</h2>
+                <p class="card-content">
+                    To be Kenya's leading recreational running club — empowering individuals to achieve their running goals, explore Kenya's scenic beauty, and build a vibrant, inclusive community. Through running, we envision transforming lives not only on the trail, but also through purposeful giving and meaningful support to charitable initiatives across the country.
+                </p>
+            </div>
+        </div>
+
+        <div class="committee-section scroll-animation">
+            <h2 class="section-title">Club Management Structure</h2>
+            <p class="committee-intro">
+                The Club is governed by a constitution, and managed by a committee elected every two years. The club committee includes a Patron, Chairperson, Treasurer, Co-ordinator/Secretary, Trail King, and members of the Calendar, Routes and Events (CRE) Committee. The CRE Committee sets the club's calendar on a biannual basis with upcoming races in mind when determining distances of each weekly run, and is assisted by volunteers from among the members in scouting for interesting running locations.
+            </p>
+
+           <div class="organogram-container">
+            <div class="organogram-title">
+                <h3>Urban Swaras Running Club - Organogram</h3>
+            </div>
+
+            <!-- Patron Level -->
+            <div class="org-level patron-level">
+                <div class="org-card patron-card" data-position="patron">
+                    <div class="card-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="position-title">Patron</h4>
+                        <p class="position-name">Ajaa Obukai</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connection Line -->
+            <div class="org-connection vertical-line"></div>
+
+            <!-- Chairperson Level -->
+            <div class="org-level chairperson-level">
+                <div class="org-card chairperson-card" data-position="chairperson">
+                    <div class="card-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="position-title">Chairperson</h4>
+                        <p class="position-name">Anthony Kiai</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connection Lines to Committee -->
+            <div class="org-connections">
+                <div class="horizontal-line"></div>
+                <div class="vertical-branches">
+                    <div class="branch-line"></div>
+                    <div class="branch-line"></div>
+                    <div class="branch-line"></div>
+                    <div class="branch-line"></div>
+                </div>
+            </div>
+
+            <!-- Committee Level -->
+            <div class="org-level committee-level">
+                <div class="org-card committee-card" data-position="secretary">
+                    <div class="card-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="position-title">Secretary / MC</h4>
+                        <p class="position-name">Winnie Okombo</p>
+                    </div>
+                </div>
+
+                <div class="org-card committee-card" data-position="trail-king">
+                    <div class="card-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="position-title">Trail King (TR)</h4>
+                        <p class="position-name">Joseph Kamau</p>
+                    </div>
+                </div>
+
+                <div class="org-card committee-card" data-position="cre">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="position-title">Calendar, Routes & Events (CRE)</h4>
+                        <p class="position-name">Various</p>
+                    </div>
+                </div>
+
+                <div class="org-card committee-card" data-position="treasurer">
+                    <div class="card-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="position-title">Treasurer / M1</h4>
+                        <p class="position-name">Gilbert Amondi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Legend -->
+            <div class="organogram-legend">
+                <div class="legend-item">
+                    <div class="legend-color patron-color"></div>
+                    <span>Leadership</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color committee-color"></div>
+                    <span>Committee Members</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+            <h3 style="text-align: center; color: var(--primary); font-size: 2rem; margin-bottom: 30px;">Current Committee (2023-2025)</h3>
+
+            <div class="committee-grid">
+                <div class="committee-member">
+                    <div class="member-role">Chairperson</div>
+                    <div class="member-name">Hon. Anthony Kiai</div>
+                </div>
+                <div class="committee-member">
+                    <div class="member-role">Treasurer</div>
+                    <div class="member-name">Gilbert Asamba</div>
+                </div>
+                <div class="committee-member">
+                    <div class="member-role">Coordinator/Secretary</div>
+                    <div class="member-name">Susan Okoma</div>
+                </div>
+                <div class="committee-member">
+                    <div class="member-role">Trail King</div>
+                    <div class="member-name">Joseph Masika</div>
+                </div>
+                <div class="committee-member">
+                    <div class="member-role">Trail Fox</div>
+                    <div class="member-name">Benjamin Chikani</div>
+                </div>
+            </div>
+
+            <div class="cre-section">
+                <h4 class="cre-title">Calendar, Routes and Events (CRE) Committee</h4>
+                <div class="cre-members">
+                    <span class="cre-member">Michael Nawari</span>
+                    <span class="cre-member">Shem Kiptoon</span>
+                    <span class="cre-member">Annika Berlin</span>
+                    <span class="cre-member">Carol Mungai</span>
+                    <span class="cre-member">Felicita Kagwanja</span>
+                    <span class="cre-member">Davis Gitari</span>
+                    <span class="cre-member">Joseph Gatonye</span>
+                    <span class="cre-member">Wanjau Muriu</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="documents-section">
+            <div class="document-card scroll-animation">
+                <div class="document-icon">📜</div>
+                <h3 class="document-title">Club Constitution</h3>
+                <p style="margin-bottom: 20px; color: var(--text);">
+                    Our governing document outlining the club's structure, member rights, and operational procedures.
+                </p>
+                <a href="documents/USRC CONSTITUTION (Updated 2023).pdf" class="document-link">View Constitution</a>
+            </div>
+
+            <div class="document-card scroll-animation">
+                <div class="document-icon">📋</div>
+                <h3 class="document-title">Rules & Regulations</h3>
+                <p style="margin-bottom: 20px; color: var(--text);">
+                    Detailed guidelines for club activities, member conduct, and operational standards.
+                </p>
+                <a href="documents/CLUB RULES AND REGULATIONS.PDF" class="document-link">View Rules</a>
+            </div>
+        </div>
+    </div>
+ 
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Urban Swaras</h3>
+            <p class="footer-about">Nairobi's premier running community since 2006. Promoting recreational running and building friendships through shared miles.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Strava"><i class="fab fa-strava"></i></a>
+                <a href="#" aria-label="Garmin"><i class="fas fa-running"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Events</a></li>
+                <li><a href="members.html">Membership</a></li>
+                <li><a href="regulation.html">Governance</a></li>
+                <li><a href="data.html">Downloads</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Contact Us</h3>
+            <ul class="footer-contact">
+                <li><i class="fas fa-phone-alt"></i> +254740894117</li>
+                <li><i class="fas fa-envelope"></i> urbanswarasrunningclub@gmail.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+                <li><i class="fas fa-clock"></i> Runs every Saturday 6:30 AM</li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Stay Updated</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="footer-notes">Get notified about upcoming runs and events.</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Urban Swaras Running Club. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="data.html">Privacy Policy</a>
+            <a href="regulation.html">Terms of Use</a>
+        </div>
+    </div>
+</footer>
+
+
+ <script src="regulation.js"></script>
+<style>
+        /* Brand Colors */
+        :root {
+            --primary: #1F3C5F;
+            --secondary: #6BA2D9;
+            --accent: #F57C51;
+            --text: #333333;
+            --light-bg: #F5F5F5;
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, var(--whatsapp), #20b954);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: var(--white);
+            animation: pulse-whatsapp 2s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(135deg, #20b954, var(--whatsapp));
+        }
+
+        .whatsapp-float i {
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover i {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse-whatsapp {
+            0%, 100% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0.1);
+            }
+        }
+
+        /* WhatsApp Tooltip */
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 75px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(31, 60, 95, 0.3);
+        }
+
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 8px solid transparent;
+            border-left-color: var(--primary);
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) translateX(-10px);
+        }
+
+        /* WhatsApp Header Integration */
+        .whatsapp-header-btn {
+            background: linear-gradient(135deg, var(--whatsapp), #20b954);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-header-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(135deg, #20b954, var(--whatsapp));
+        }
+
+        .whatsapp-header-btn i {
+            font-size: 1.1rem;
+        }
+
+        /* WhatsApp Section Integration */
+        .whatsapp-section {
+            background: linear-gradient(135deg, var(--light-bg), var(--white));
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .whatsapp-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .whatsapp-section h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .whatsapp-section p {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, var(--whatsapp), #20b954);
+            color: var(--white);
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .whatsapp-cta:hover::before {
+            left: 100%;
+        }
+
+        .whatsapp-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(135deg, #20b954, var(--whatsapp));
+        }
+
+        .whatsapp-cta i {
+            font-size: 1.5rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-8px);
+            }
+            60% {
+                transform: translateY(-4px);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .whatsapp-float i {
+                font-size: 1.6rem;
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+
+            .whatsapp-header-btn span {
+                display: none;
+            }
+
+            .whatsapp-header-btn {
+                padding: 10px 12px;
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                justify-content: center;
+            }
+
+            .whatsapp-section h3 {
+                font-size: 1.6rem;
+            }
+
+            .whatsapp-section p {
+                font-size: 1rem;
+            }
+
+            .whatsapp-cta {
+                padding: 15px 25px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Demo body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--light-bg);
+            height: 200vh; /* For demo scrolling */
+        }
+
+        .demo-content {
+            padding: 100px 20px;
+            text-align: center;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body> 
+
+    <!-- Option 3: Floating WhatsApp Button (Always Visible) -->
+    <a href="https://wa.me/254740894117?text=Hi%20Urban%20Swaras!%20I'm%20interested%20in%20learning%20more%20about%20the%20running%20club." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contact us on WhatsApp">
+        <div class="whatsapp-tooltip">Chat with us!</div>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // WhatsApp Analytics Tracking (Optional)
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', function() {
+                // Track WhatsApp clicks
+                console.log('WhatsApp contact initiated');
+                
+                // You can add Google Analytics or other tracking here
+                // gtag('event', 'whatsapp_contact', {
+                //     'event_category': 'contact',
+                //     'event_label': 'whatsapp_click'
+                // });
+            });
+        });
+
+        // Show/hide floating button based on scroll (Optional)
+        let lastScrollTop = 0;
+        const whatsappFloat = document.querySelector('.whatsapp-float');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 300) {
+                whatsappFloat.style.opacity = '1';
+                whatsappFloat.style.visibility = 'visible';
+            } else {
+                whatsappFloat.style.opacity = '0.7';
+            }
+        });
+    </script>
+</body>
+</html>
