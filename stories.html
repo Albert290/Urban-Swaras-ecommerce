@@ -11,25 +11,37 @@
         
 </head>
  
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="next-event">
-            <span>Next event:</span> USRC June Celebration Run @ The Berra Lounge Hotel, Ngong  Saturday, June 14th, 2025
-        </div>
-        <div class="contact-social">
-            <div class="phone">
-                <i class="fas fa-phone"></i> +254740894117
-            </div>
-            <div class="social-icons">
-                <a href="https://www.strava.com/clubs/244473" title="Strava"><i class="fab fa-strava"></i></a>
-                <a href="https://connect.garmin.com/modern/group/18200" title="Garmin"><i class="fas fa-running"></i></a>
-                <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/urbanswaras" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            </div>
-        </div>
+      <!-- Top Bar -->
+<div class="top-bar">
+    <div class="next-event">
+        <span>Next event:</span> USRC June Celebration Run @ The Berra Lounge Hotel, Ngong Saturday, June 14th, 2025
     </div>
+    <div class="contact-social">
+        <div class="phone">
+            <i class="fas fa-phone"></i> +254740894117
+        </div>
+        <div class="social-icons">
+            <a href="https://www.strava.com/clubs/244473" title="Strava" class="strava-icon">
+                <i class="fab fa-strava"></i>
+            </a>
+            <a href="https://connect.garmin.com/modern/group/18200" title="Garmin" class="garmin-icon">
+                <i class="fas fa-running"></i>
+            </a>
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/urbanswaras" title="Facebook" class="facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <a href="calendar.html#redirect" class="register-btn">
+             <span class="btn-text-full">Click here to register</span>
+              <span class="btn-text-short">Register</span>
+        </a>
+    </div>
+</div>
     
-    <!-- Main Header -->
+<!-- Main Header -->
 <header class="main-header">
     <div class="header-container">
         <div class="logo-section">
@@ -49,8 +61,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="regulation.html" class="nav-link">
-                        <span>Governance</span>
+                    <a href="stories.html active" class="nav-link">
+                        <span>Our Stories</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -59,18 +71,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="data.html" class="nav-link">
-                        <span>Downloads</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">
-                        <span>Contact</span>
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a href="stories.html" class="nav-link">
-                        <span>Our Stories</span>
+                    <a href="regulation.html" class="nav-link">
+                        <span>Governance</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -78,6 +80,16 @@
                     <span>Duka La Swara</span>
                   </a>
                 </li> 
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="data.html" class="nav-link">
+                        <span>Downloads</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         
@@ -117,10 +129,10 @@
                     </a>
                 </li>
                 <li class="mobile-item">
-                    <a href="regulation.html" class="mobile-link">
-                        <i class="fas fa-gavel"></i>
-                        <span>Governance</span>
-                    </a>
+                  <a href="stories.html" class="mobile-link">
+                     <i class="fas fa-book-open"></i>
+                     <span>Our Stories</span>
+                  </a>
                 </li>
                 <li class="mobile-item">
                     <a href="members.html" class="mobile-link">
@@ -129,9 +141,15 @@
                     </a>
                 </li>
                 <li class="mobile-item">
-                    <a href="data.html" class="mobile-link">
-                        <i class="fas fa-download"></i>
-                        <span>Downloads</span>
+                    <a href="regulation.html" class="mobile-link">
+                        <i class="fas fa-gavel"></i>
+                        <span>Governance</span>
+                    </a>
+                </li> 
+                <li class="mobile-item">
+                    <a href="https://www.urbanswaras.co.ke/" class="mobile-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Duka La Swara</span>
                     </a>
                 </li>
                 <li class="mobile-item">
@@ -141,19 +159,19 @@
                     </a>
                 </li>
                 <li class="mobile-item">
-                    <a href="https://www.urbanswaras.co.ke/" class="mobile-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>Duka La Swara</span>
+                    <a href="data.html" class="mobile-link">
+                        <i class="fas fa-download"></i>
+                        <span>Downloads</span>
                     </a>
-                </li>
+                </li> 
             </ul>
             
-            <div class="mobile-cta">
+            <!-- <div class="mobile-cta">  
                 <button class="mobile-cta-button">
                     <i class="fas fa-user-plus"></i>
                     <span>Become a Member</span>
                 </button>
-            </div>
+            </div>-->
         </nav>
     </div>
 </header>
@@ -678,295 +696,208 @@
         });
     </script>
 
-     <section class="media-section">
+     
+     <section class="stories-section">
         <div class="container">
             <div class="section-header">
-                <div class="section-subtitle">Media Coverage</div>
-                <h2 class="section-title">Urban Swaras in the News</h2>
-                <p class="section-description">
-                    See how Urban Swaras Running Club is making headlines and inspiring the running community across Kenya and beyond.
-                </p>
+                <h1 class="section-title">Our Stories</h1>
+                <p class="section-subtitle">Discover the inspiring journeys, media coverage, and video content that showcase the Urban Swaras running community and our impact on runners' lives.</p>
             </div>
 
-            <div class="media-grid">
-                <article class="media-card">
-                    <div class="featured-badge">Featured</div>
-                    <div class="card-header">
-                        <div class="publication-logo">
-                            <div class="logo-icon">BD</div>
-                            <div class="publication-name">Business Daily Africa</div>
-                            <div class="publication-date">2023</div>
+            <div class="stories-grid">
+                <div class="story-column blogs-column">
+                    <div class="column-header">
+                        <i class="fas fa-blog column-icon"></i>
+                        <h2 class="column-title">Blogs</h2>
+                        <p class="column-description">Read inspiring stories, training tips, and experiences shared by our running community members and coaches.</p>
+                    </div>
+                   
+                    <div class="column-content">
+                        <div class="content-preview">
+                            <div class="preview-item">
+                                <i class="fas fa-running preview-icon"></i>
+                                <span class="preview-text">Training Tips & Techniques</span>
+                            </div>
+                            <div class="preview-item">
+                                <i class="fas fa-heart preview-icon"></i>
+                                <span class="preview-text">Personal Running Journeys</span>
+                            </div>
+                            <div class="preview-item">
+                                <i class="fas fa-trophy preview-icon"></i>
+                                <span class="preview-text">Race Experiences & Results</span>
+                            </div>
+                            <div class="preview-item">
+                                <i class="fas fa-users preview-icon"></i>
+                                <span class="preview-text">Community Highlights</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <h3 class="article-title">Urban Swaras: A Running Club Changing Lives</h3>
-                        <p class="article-description">
-                            Discover how Urban Swaras Running Club has transformed from a small group of running enthusiasts into a community that's changing lives across Nairobi.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/urban-swaras-a-running-club-changing-lives--2243486" target="_blank" class="read-article-btn">
-                                Read Article
-                            </a>
-                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15,3 21,3 21,9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </div>
-                    </div>
-                </article>
 
-                <article class="media-card">
-                    <div class="card-header">
-                        <div class="publication-logo">
-                            <div class="logo-icon">BD</div>
-                            <div class="publication-name">Business Daily Africa</div>
-                            <div class="publication-date">2023</div>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="article-title">The Running Clubs Taking Over Nairobi</h3>
-                        <p class="article-description">
-                            An in-depth look at how running clubs like Urban Swaras are revolutionizing fitness culture and community building in Nairobi.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/the-running-clubs-taking-over-nairobi-3865094" target="_blank" class="read-article-btn">
-                                Read Article
-                            </a>
-                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15,3 21,3 21,9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </div>
-                    </div>
-                </article>
+                    <button class="view-all-btn" onclick="window.open('https://urbanswaras.co.ke/media/', '_blank')">
+                        <i class="fas fa-external-link-alt"></i>
+                        Read All Blogs
+                    </button>
+                </div>
 
-                <article class="media-card">
-                    <div class="card-header">
-                        <div class="publication-logo">
-                            <div class="logo-icon">BD</div>
-                            <div class="publication-name">Business Daily Africa</div>
-                            <div class="publication-date">2023</div>
+                <div class="story-column media-column">
+                    <div class="column-header">
+                        <i class="fas fa-newspaper column-icon"></i>
+                        <h2 class="column-title">Media Stories</h2>
+                        <p class="column-description">Check out how Urban Swaras has been featured in various media outlets and publications.</p>
+                    </div>
+                   
+                    <div class="column-content">
+                        <div class="content-preview">
+                            <div class="preview-item">
+                                <i class="fas fa-file-pdf preview-icon"></i>
+                                <span class="preview-text">Newsletter Features</span>
+                            </div>
+                            <div class="preview-item">
+                                <i class="fas fa-newspaper preview-icon"></i>
+                                <span class="preview-text">Business Daily Articles</span>
+                            </div>
+                            <div class="preview-item">
+                                <i class="fas fa-microphone preview-icon"></i>
+                                <span class="preview-text">Press Coverage</span>
+                            </div>
+                            <div class="preview-item">
+                                <i class="fas fa-medal preview-icon"></i>
+                                <span class="preview-text">Achievement Stories</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <h3 class="article-title">Meet the Marathoner Behind Viceroy Success</h3>
-                        <p class="article-description">
-                            A profile of one of Urban Swaras' standout athletes and their journey to marathon success with the support of the running community.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/meet-the-marathoner-behind-viceroy-success--2071684" target="_blank" class="read-article-btn">
-                                Read Article
-                            </a>
-                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15,3 21,3 21,9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </div>
-                    </div>
-                </article>
 
-                <article class="media-card">
-                    <div class="card-header">
-                        <div class="publication-logo">
-                            <div class="logo-icon">BD</div>
-                            <div class="publication-name">Business Daily Africa</div>
-                            <div class="publication-date">2023</div>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="article-title">Victor Kamau's Nine-Year Ultra Run Addiction</h3>
-                        <p class="article-description">
-                            Follow the incredible ultra-running journey of Victor Kamau, a dedicated member of the Urban Swaras community and his passion for long-distance running.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/victor-kamau-s-nine-year-ultra-run-addiction--4514092" target="_blank" class="read-article-btn">
-                                Read Article
-                            </a>
-                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15,3 21,3 21,9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </div>
-                    </div>
-                </article>
+                    <button class="view-all-btn" onclick="showMediaLinks()">
+                        <i class="fas fa-eye"></i>
+                        View Media Coverage
+                    </button>
+                </div>
 
-                <article class="media-card">
-                    <div class="card-header">
-                        <div class="publication-logo">
-                            <div class="logo-icon">BD</div>
-                            <div class="publication-name">Business Daily Africa</div>
-                            <div class="publication-date">2022</div>
+                <div class="story-column videos-column">
+                    <div class="column-header">
+                        <i class="fas fa-video column-icon"></i>
+                        <h2 class="column-title">Video Stories</h2>
+                        <p class="column-description">Watch our running adventures, training sessions, and member testimonials captured on video.</p>
+                    </div>
+                   
+                    <div class="column-content">
+                        <div class="content-preview">
+                            <div class="preview-item">
+                                <i class="fas fa-play-circle preview-icon"></i>
+                                <span class="preview-text">Training Sessions</span>
+                            </div>
+                            <div class="preview-item">
+                                <i class="fas fa-mountain preview-icon"></i>
+                                <span class="preview-text">Adventure Runs</span>
+                            </div>
+                            <div class="preview-item">
+                                <i class="fas fa-comments preview-icon"></i>
+                                <span class="preview-text">Member Testimonials</span>
+                            </div>
+                            <div class="preview-item">
+                                <i class="fas fa-calendar-check preview-icon"></i>
+                                <span class="preview-text">Event Highlights</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <h3 class="article-title">Touring Kenya Through the Sporting Calendar</h3>
-                        <p class="article-description">
-                            Explore how Urban Swaras and other running clubs contribute to Kenya's vibrant sporting culture and tourism through organized running events.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/touring-kenya-through-the-sporting-calendar--2044200" target="_blank" class="read-article-btn">
-                                Read Article
-                            </a>
-                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15,3 21,3 21,9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </div>
-                    </div>
-                </article>
-            </div>
 
-            <div class="stats-section">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="5">5+</div>
-                        <div class="stat-label">Media Features</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="3">3</div>
-                        <div class="stat-label">Years in Spotlight</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="1000">1000+</div>
-                        <div class="stat-label">Readers Reached</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="50">50+</div>
-                        <div class="stat-label">Stories Shared</div>
-                    </div>
+                    <button class="view-all-btn" onclick="showVideoLinks()">
+                        <i class="fas fa-youtube"></i>
+                        Watch Videos
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section class="cta-section">
-        <div class="cta-background"></div>
-        <div class="cta-overlay"></div>
-        
-        <!-- Floating Runners -->
-        <div class="floating-runners">🏃‍♂️</div>
-        <div class="floating-runners">🏃‍♀️</div>
-        <div class="floating-runners">🏃</div>
-        <div class="floating-runners">🏃‍♂️</div>
-        
-        <div class="cta-container">
-            <div class="cta-header">
-                <span class="cta-badge">Join the Movement</span>
-                <h2 class="cta-title">Share Your Running Story</h2>
-                <p class="cta-subtitle">
-                    Every runner has a story. Every mile has a memory. Your journey could inspire the next Urban Swara to lace up and hit the trails.
-                </p>
+    <section class="upload-section">
+        <div class="container">
+            <div class="upload-header">
+                <h2><i class="fas fa-pen-fancy"></i> Share Your Running Story</h2>
+                <p>Every runner has a unique journey. Share your experiences, challenges, victories, and inspire others in our community. Your story could be the motivation someone needs to start their running journey!</p>
             </div>
 
-            <div class="story-types">
-                <div class="story-type-card" onclick="selectStoryType('race')">
-                    <span class="story-icon">🏆</span>
-                    <h3 class="story-type-title">Race Recaps</h3>
-                    <p class="story-type-desc">Share your marathon conquests, trail adventures, or that first 5K breakthrough moment</p>
+            <form class="upload-form" id="storyUploadForm">
+                <div class="form-group">
+                    <label class="form-label" for="runnerName">
+                        <i class="fas fa-user"></i> Your Name *
+                    </label>
+                    <input type="text" id="runnerName" name="runnerName" class="form-input" required placeholder="Enter your full name">
                 </div>
-                
-                <div class="story-type-card" onclick="selectStoryType('training')">
-                    <span class="story-icon">💪</span>
-                    <h3 class="story-type-title">Training Tales</h3>
-                    <p class="story-type-desc">From dawn workouts to coach wisdom, tell us about your training journey</p>
+
+                <div class="form-group">
+                    <label class="form-label" for="runnerEmail">
+                        <i class="fas fa-envelope"></i> Email Address *
+                    </label>
+                    <input type="email" id="runnerEmail" name="runnerEmail" class="form-input" required placeholder="Enter your email">
                 </div>
-                
-                <div class="story-type-card" onclick="selectStoryType('community')">
-                    <span class="story-icon">👥</span>
-                    <h3 class="story-type-title">Community Chronicles</h3>
-                    <p class="story-type-desc">The friendships forged, the support found, the Urban Swaras family moments</p>
+
+                <div class="form-group">
+                    <label class="form-label" for="storyTitle">
+                        <i class="fas fa-heading"></i> Story Title *
+                    </label>
+                    <input type="text" id="storyTitle" name="storyTitle" class="form-input" required placeholder="Give your story a catchy title">
                 </div>
-                
-                <div class="story-type-card" onclick="selectStoryType('transformation')">
-                    <span class="story-icon">✨</span>
-                    <h3 class="story-type-title">Transformation Stories</h3>
-                    <p class="story-type-desc">How running changed your life, health, mindset, or perspective</p>
+
+                <div class="form-group">
+                    <label class="form-label" for="storyContent">
+                        <i class="fas fa-edit"></i> Your Story *
+                    </label>
+                    <textarea id="storyContent" name="storyContent" class="form-textarea" required placeholder="Tell us about your running journey, challenges overcome, memorable races, or how running has changed your life..."></textarea>
                 </div>
-            </div>
- 
-                
-                <div class="contact-options">
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <span>info@urbanswaras.co.ke</span>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="fas fa-images"></i> Upload Photos/Documents (Optional)
+                    </label>
+                    <div class="file-upload-area" id="fileUploadArea">
+                        <i class="fas fa-cloud-upload-alt file-upload-icon"></i>
+                        <div class="file-upload-text">Drop your files here or click to browse</div>
+                        <div class="file-upload-subtext">Support for images, PDFs, and documents (Max 10MB each)</div>
+                        <input type="file" id="fileInput" name="files" class="file-input" multiple accept="image/*,.pdf,.doc,.docx">
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📱</span>
-                        <span>WhatsApp: +254740894117</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📝</span>
-                        <span>500-1500 words preferred</span>
-                    </div>
+                    <div class="file-list" id="fileList"></div>
                 </div>
-            </div>
 
-            <div class="community-hashtags">
-                <p class="hashtag-title">Join the conversation:</p>
-                <div class="hashtags">
-                    <span class="hashtag" onclick="copyHashtag(this)">#UrbanSwaras</span>
-                    <span class="hashtag" onclick="copyHashtag(this)">#RunningIsLiving</span>
-                    <span class="hashtag" onclick="copyHashtag(this)">#SwarasStories</span>
-                    <span class="hashtag" onclick="copyHashtag(this)">#NairobiRunners</span>
-                    <span class="hashtag" onclick="copyHashtag(this)">#RunWithUs</span>
-                </div>
-            </div>
-        </div>
-    </section>
+                <button type="submit" class="upload-btn" id="uploadBtn">
+                    <i class="fas fa-paper-plane"></i>
+                    Share My Story
+                </button>
 
-    <!-- Story Submission Modal -->
-    <div class="modal" id="storyModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeStoryModal()">×</button>
-            <h3 class="modal-title">Share Your Story</h3>
-            <form id="storyForm" action="https://formspree.io/f/urbanswaras@gmail.com" method="POST" onsubmit="submitStory(event)">
-                <div class="form-group">
-                    <label class="form-label">Your Name</label>
-                    <input type="text" class="form-input" name="name" required placeholder="Enter your name">
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Thank you for sharing your story!</strong><br>
+                    Your story has been submitted successfully. Our team will review it and get back to you soon.
                 </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-input" name="email" required placeholder="your.email@example.com">
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Story Title</label>
-                    <input type="text" class="form-input" name="title" required placeholder="Give your story a catchy title">
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Story Type</label>
-                    <select class="form-input" name="type" required>
-                        <option value="">Select story type</option>
-                        <option value="race">Race Recap</option>
-                        <option value="training">Training Tale</option>
-                        <option value="community">Community Chronicle</option>
-                        <option value="transformation">Transformation Story</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Your Story</label>
-                    <textarea class="form-textarea" name="story" required placeholder="Tell us your story... What happened? How did it feel? What did you learn? Make it vivid, make it real, make it yours."></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Tags (optional)</label>
-                    <input type="text" class="form-input" name="tags" placeholder="marathon, trail, 5K, first-time, etc. (comma separated)">
-                </div>
-                
-                <button type="submit" class="submit-btn">Submit My Story 🚀</button>
             </form>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="mediaModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Media Coverage</h3>
+                <button class="modal-close" onclick="closeModal('mediaModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="mediaLinks">
+                </div>
         </div>
     </div>
 
+    <div class="modal-overlay" id="videoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Video Stories</h3>
+                <button class="modal-close" onclick="closeModal('videoModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="videoLinks">
+                </div>
+        </div>
+    </div>
  
 <footer class="site-footer">
     <div class="footer-container">
@@ -974,12 +905,7 @@
         <div class="footer-column">
             <h3 class="footer-heading">Urban Swaras</h3>
             <p class="footer-about">Nairobi's premier running community since 2006. Promoting recreational running and building friendships through shared miles.</p>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Strava"><i class="fab fa-strava"></i></a>
-                <a href="#" aria-label="Garmin"><i class="fas fa-running"></i></a>
-            </div>
+        
         </div>
 
         <!-- Column 2: Quick Links -->
@@ -987,35 +913,48 @@
             <h3 class="footer-heading">Quick Links</h3>
             <ul class="footer-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="calendar.html">Events</a></li>
-                <li><a href="regulation.html">Governance</a></li>
+                <li><a href="calendar.html">Events</a></li> 
                 <li><a href="members.html">Membership</a></li>
-                <li><a href="data.html">Downloads</a></li>
+                <li><a href="regulation.html">Governance</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="https://www.urbanswaras.co.ke/">Duka La Swara</a></li>
             </ul>
         </div>
 
         <!-- Column 3: Contact -->
-        <div class="footer-column">
-            <h3 class="footer-heading">Contact Us</h3>
-            <ul class="footer-contact">
-                <li><i class="fas fa-phone-alt"></i> +254740894117</li>
-                <li><i class="fas fa-envelope"></i> urbanswarasrunningclub@gmail.com</li>
-                <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
-                <li><i class="fas fa-clock"></i> Runs every Saturday 6:30 AM</li>
-            </ul>
-        </div>
+<div class="footer-column">
+    
+    <h3 class="footer-heading">Contact Us</h3>
+    <ul class="footer-contact">
+        <li><i class="fas fa-phone-alt"></i> +254740894117</li>
+        <li><i class="fas fa-envelope"></i> info@urbanswaras.co.ke</li>
+    </ul>
+    <div class="footer-social">
+        <a href="https://www.facebook.com/urbanswaras" aria-label="Facebook" class="facebook-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a><div class="contact-social">
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a></div>
+        <a href="https://www.strava.com/clubs/244473" aria-label="Strava" class="strava-icon">
+            <i class="fab fa-strava"></i>
+        </a>
+        <a href="https://connect.garmin.com/modern/group/18200" aria-label="Garmin" class="garmin-icon">
+            <i class="fas fa-running"></i>
+        </a>
+    </div>
+</div>
 
         <!-- Column 4: Newsletter -->
-        <div class="footer-column">
-            <h3 class="footer-heading">Stay Updated</h3>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-            <p class="footer-notes">Get notified about upcoming runs and events.</p>
-        </div>
+       <div class="footer-column">
+         <h3 class="footer-heading">Stay Updated</h3>
+         <form class="newsletter-form" action="https://formspree.io/f/mkgbvjey" method="POST">
+             <input type="email" name="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+         </form>
+              <p class="footer-notes">Get notified about upcoming runs and events.</p>
+      </div>
+    </div>
     </div>
 
     <div class="footer-bottom">
@@ -1025,5 +964,5 @@
             <a href="regulation.html">Terms of Use</a>
         </div>
     </div>
-</footer> 
+</footer>
 <script src="stories.js"></script>

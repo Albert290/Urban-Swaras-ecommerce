@@ -137,222 +137,210 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
       
-   // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                    
-                    // Trigger counter animation for stats
-                    if (entry.target.classList.contains('stat-number')) {
-                        animateCounter(entry.target);
-                    }
-                }
-            });
-        }, observerOptions);
-
-        // Counter animation function
-        function animateCounter(element) {
-            const target = parseInt(element.getAttribute('data-count'));
-            const duration = 2000;
-            const increment = target / (duration / 16);
-            let current = 0;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                
-                if (target >= 1000) {
-                    element.textContent = Math.floor(current).toLocaleString() + '+';
-                } else {
-                    element.textContent = Math.floor(current) + (target >= 10 ? '+' : '');
-                }
-            }, 16);
-        }
-
-        // Initialize observers
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.media-card, .stat-number');
-            animatedElements.forEach(el => observer.observe(el));
-
-            // Add hover effects for enhanced interactivity
-            const cards = document.querySelectorAll('.media-card');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    card.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-        });
-
-        // Smooth scroll for better UX
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        let selectedStoryType = '';
-
-        function selectStoryType(type) {
-            selectedStoryType = type;
-            // Visual feedback for selection
-            document.querySelectorAll('.story-type-card').forEach(card => {
-                card.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-            });
-            event.currentTarget.style.borderColor = '#F57C51';
-            event.currentTarget.style.boxShadow = '0 0 20px rgba(245, 124, 81, 0.3)';
-        }
-
-        function openStoryModal() {
-            const modal = document.getElementById('storyModal');
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-            
-            // Pre-select story type if one was clicked
-            if (selectedStoryType) {
-                const typeSelect = document.querySelector('select[name="type"]');
-                typeSelect.value = selectedStoryType;
+// Media links data
+        const mediaLinks = [
+            {
+                url: 'https://urbanswaras.co.ke/wp-content/uploads/2019/11/USRC-Newsletter-November-2019.pdf',
+                title: 'USRC Newsletter - November 2019',
+                description: 'Official Urban Swaras Running Club newsletter featuring member highlights and club updates.'
+            },
+            {
+                url: 'https://www.businessdailyafrica.com/bd/lifestyle/touring-kenya-through-the-sporting-calendar--2044200',
+                title: 'Touring Kenya Through The Sporting Calendar',
+                description: 'Business Daily Africa feature on Kenya\'s sporting events and running culture.'
+            },
+            {
+                url: 'https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/victor-kamau-s-nine-year-ultra-run-addiction--4514092',
+                title: 'Victor Kamau\'s Nine-Year Ultra Run Addiction',
+                description: 'In-depth profile of Victor Kamau and his journey in ultra-running.'
+            },
+            {
+                url: 'https://www.businessdailyafrica.com/bd/lifestyle/the-running-clubs-taking-over-nairobi-3865094',
+                title: 'The Running Clubs Taking Over Nairobi',
+                description: 'Feature article about the growing running club culture in Nairobi, including Urban Swaras.'
+            },
+            {
+                url: 'https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/urban-swaras-a-running-club-changing-lives--2243486#google_vignette',
+                title: 'Urban Swaras: A Running Club Changing Lives',
+                description: 'Comprehensive coverage of how Urban Swaras is transforming lives through running.'
             }
+        ];
+
+        // Video links data
+        const videoLinks = [
+            {
+                url: 'https://youtu.be/YXBnN7L19iY?si=HbOtrctrwL-4xx09',
+                title: 'Urban Swaras Training Session',
+                description: 'Join us for an exciting training session with the Urban Swaras running community.'
+            },
+            {
+                url: 'https://youtu.be/4-ke31svONg?si=ZLm3ru0fyvCN5-8F',
+                title: 'Marathon Preparation Journey',
+                description: 'Follow our members as they prepare for their marathon challenges.'
+            },
+            {
+                url: 'https://youtu.be/EmHsqz9USio?si=HQSGmSC9ZkXg9EoP',
+                title: 'Community Running Event',
+                description: 'Highlights from our community running event and member experiences.'
+            },
+            {
+                url: 'https://youtu.be/5UVdYSZR3wY?si=fmGtIbwgOosd0_J5',
+                title: 'Runner Success Stories',
+                description: 'Inspiring success stories from Urban Swaras running club members.'
+            }
+        ];
+
+        // Show media links modal
+        function showMediaLinks() {
+            const modal = document.getElementById('mediaModal');
+            const linksContainer = document.getElementById('mediaLinks');
+           
+            linksContainer.innerHTML = '';
+           
+            mediaLinks.forEach(link => {
+                const linkElement = document.createElement('a');
+                linkElement.href = link.url;
+                linkElement.target = '_blank';
+                linkElement.className = 'media-link';
+                linkElement.innerHTML = `
+                    <div class="link-title"><i class="fas fa-external-link-alt"></i> <span class="math-inline">\{link\.title\}</div\>
+<div class\="link\-description"\></span>{link.description}</div>
+                `;
+                linksContainer.appendChild(linkElement);
+            });
+           
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
-        function closeStoryModal() {
-            const modal = document.getElementById('storyModal');
-            modal.style.display = 'none';
+        // Show video links modal
+        function showVideoLinks() {
+            const modal = document.getElementById('videoModal');
+            const linksContainer = document.getElementById('videoLinks');
+           
+            linksContainer.innerHTML = '';
+           
+            videoLinks.forEach(link => {
+                const linkElement = document.createElement('a');
+                linkElement.href = link.url;
+                linkElement.target = '_blank';
+                linkElement.className = 'media-link';
+                linkElement.innerHTML = `
+                    <div class="link-title"><i class="fab fa-youtube"></i> <span class="math-inline">\{link\.title\}</div\>
+<div class\="link\-description"\></span>{link.description}</div>
+                `;
+                linksContainer.appendChild(linkElement);
+            });
+           
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
             document.body.style.overflow = 'auto';
         }
 
-        function submitStory(event) {
-            event.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(event.target);
-            
-            // Show loading state
-            const submitBtn = event.target.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Submitting... ✨';
-            submitBtn.disabled = true;
-            submitBtn.style.background = '#6BA2D9';
-            
-            // Submit to Formspree
-            fetch('https://formspree.io/f/urbanswaras@gmail.com', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Success
-                    submitBtn.textContent = 'Story Submitted! 🎉';
-                    submitBtn.style.background = '#4CAF50';
-                    
-                    setTimeout(() => {
-                        closeStoryModal();
-                        showSuccessMessage();
-                        
-                        // Reset form and button
-                        event.target.reset();
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.style.background = 'var(--accent)';
-                        
-                        // Clear selected story type styling
-                        document.querySelectorAll('.story-type-card').forEach(card => {
-                            card.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-                            card.style.boxShadow = '';
-                        });
-                        selectedStoryType = '';
-                    }, 2000);
-                } else {
-                    throw new Error('Network response was not ok');
-                }
-            })
-            .catch(error => {
-                // Error handling
-                submitBtn.textContent = 'Error - Try Again';
-                submitBtn.style.background = '#f44336';
-                submitBtn.disabled = false;
-                
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.style.background = 'var(--accent)';
-                }, 3000);
-            });
-        }
-
-        function showSuccessMessage() {
-            const message = document.createElement('div');
-            message.innerHTML = `
-                <div style="position: fixed; top: 2rem; right: 2rem; background: #4CAF50; color: white; padding: 1rem 2rem; border-radius: 10px; z-index: 1001; animation: slideInRight 0.5s ease-out;">
-                    <h4 style="margin: 0 0 0.5rem 0;">Story Submitted! 🎉</h4>
-                    <p style="margin: 0; font-size: 0.9rem;">Thank you for sharing your running journey with us. We'll review it and get back to you soon!</p>
-                </div>
-            `;
-            document.body.appendChild(message);
-            
-            setTimeout(() => {
-                message.remove();
-            }, 5000);
-        }
-
-        function copyHashtag(element) {
-            const hashtag = element.textContent;
-            navigator.clipboard.writeText(hashtag).then(() => {
-                const originalText = element.textContent;
-                element.textContent = 'Copied! ✓';
-                element.style.background = '#4CAF50';
-                
-                setTimeout(() => {
-                    element.textContent = originalText;
-                    element.style.background = 'rgba(255, 255, 255, 0.1)';
-                }, 1500);
-            });
-        }
-
         // Close modal when clicking outside
-        document.getElementById('storyModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeStoryModal();
-            }
-        });
- 
-
-        // Observe animated elements when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.cta-title, .cta-subtitle, .story-types, .cta-actions, .community-hashtags');
-            animatedElements.forEach(el => observer.observe(el));
-        });
-
-        // Add some extra interactivity
-        document.addEventListener('DOMContentLoaded', () => {
-            // Parallax effect for floating runners
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const runners = document.querySelectorAll('.floating-runners');
-                runners.forEach((runner, index) => {
-                    const speed = 0.5 + (index * 0.1);
-                    runner.style.transform = `translateY(${scrolled * speed}px)`;
-                });
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal(this.id);
+                }
             });
+        });
+
+        // File upload handling
+        const fileInput = document.getElementById('fileInput');
+        const fileUploadArea = document.getElementById('fileUploadArea');
+        const fileList = document.getElementById('fileList');
+        let selectedFiles = [];
+
+        // Drag and drop functionality
+        fileUploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.classList.add('dragover');
+        });
+
+        fileUploadArea.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            this.classList.remove('dragover');
+        });
+
+        fileUploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            this.classList.remove('dragover');
+            const files = Array.from(e.dataTransfer.files);
+            handleFiles(files);
+        });
+
+        // File input change
+        fileInput.addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            handleFiles(files);
+        });
+
+        // Handle file selection/addition
+        function handleFiles(files) {
+            files.forEach(file => {
+                if (selectedFiles.find(f => f.name === file.name)) {
+                    alert(`File "${file.name}" already added.`);
+                    return;
+                }
+                selectedFiles.push(file);
+                displayFile(file);
+            });
+            updateUploadButtonState();
+        }
+
+        // Display selected file
+        function displayFile(file) {
+            const fileItem = document.createElement('div');
+            fileItem.className = 'file-item';
+            fileItem.innerHTML = `
+                <div class="file-info">
+                    <i class="fas fa-file"></i>
+                    <span><span class="math-inline">\{file\.name\}</span\>
+</div\>
+<button class\="remove\-file" data\-name\="</span>{file.name}">
+                    <i class="fas fa-trash"></i>
+                </button>
+            `;
+            fileList.appendChild(fileItem);
+           
+            // Remove file from list
+            fileItem.querySelector('.remove-file').addEventListener('click', function() {
+                const fileName = this.dataset.name;
+                selectedFiles = selectedFiles.filter(file => file.name !== fileName);
+                fileItem.remove();
+                updateUploadButtonState();
+            });
+        }
+
+        // Update upload button state
+        function updateUploadButtonState() {
+            const uploadBtn = document.getElementById('uploadBtn');
+            uploadBtn.disabled = selectedFiles.length === 0;
+        }
+        updateUploadButtonState(); // Initial state
+
+        // Form submission handling
+        const storyUploadForm = document.getElementById('storyUploadForm');
+        const successMessage = document.getElementById('successMessage');
+
+        storyUploadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // For demonstration, just show the success message
+            successMessage.classList.add('show');
+            storyUploadForm.reset();
+            fileList.innerHTML = '';
+            selectedFiles = [];
+            updateUploadButtonState();
+
+            // Simulate server-side processing delay
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 3000);
         });

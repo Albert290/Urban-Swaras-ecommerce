@@ -10,23 +10,35 @@
         
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="next-event">
-            <span>Next event:</span> <span>Next event:</span> USRC June Celebration Run @ The Berra Lounge Hotel, Ngong  Saturday, June 14th, 2025
-        </div>
-        <div class="contact-social">
-            <div class="phone">
-                <i class="fas fa-phone"></i> +254740894117
-            </div>
-            <div class="social-icons">
-                <a href="https://www.strava.com/clubs/244473" title="Strava"><i class="fab fa-strava"></i></a>
-                <a href="https://connect.garmin.com/modern/group/18200" title="Garmin"><i class="fas fa-running"></i></a>
-                <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/urbanswaras" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            </div>
-        </div>
+      <!-- Top Bar -->
+<div class="top-bar">
+    <div class="next-event">
+        <span>Next event:</span> USRC June Celebration Run @ The Berra Lounge Hotel, Ngong Saturday, June 14th, 2025
     </div>
+    <div class="contact-social">
+        <div class="phone">
+            <i class="fas fa-phone"></i> +254740894117
+        </div>
+        <div class="social-icons">
+            <a href="https://www.strava.com/clubs/244473" title="Strava" class="strava-icon">
+                <i class="fab fa-strava"></i>
+            </a>
+            <a href="https://connect.garmin.com/modern/group/18200" title="Garmin" class="garmin-icon">
+                <i class="fas fa-running"></i>
+            </a>
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/urbanswaras" title="Facebook" class="facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <a href="calendar.html#redirect" class="register-btn">
+             <span class="btn-text-full">Click here to register</span>
+              <span class="btn-text-short">Register</span>
+        </a>
+    </div>
+</div>
     
    <!-- Main Header -->
 <header class="main-header">
@@ -48,8 +60,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="regulation.html" class="nav-link">
-                        <span>Governance</span>
+                    <a href="stories.html" class="nav-link">
+                        <span>Our Stories</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -58,13 +70,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="data.html" class="nav-link">
-                        <span>Downloads</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">
-                        <span>Contact</span>
+                    <a href="regulation.html" class="nav-link">
+                        <span>Governance</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -72,6 +79,16 @@
                     <span>Duka La Swara</span>
                   </a>
                 </li> 
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="data.html" class="nav-link">
+                        <span>Downloads</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         
@@ -111,10 +128,10 @@
                     </a>
                 </li>
                 <li class="mobile-item">
-                    <a href="regulation.html" class="mobile-link">
-                        <i class="fas fa-gavel"></i>
-                        <span>Governance</span>
-                    </a>
+                  <a href="stories.html" class="mobile-link">
+                     <i class="fas fa-book-open"></i>
+                     <span>Our Stories</span>
+                  </a>
                 </li>
                 <li class="mobile-item">
                     <a href="members.html" class="mobile-link">
@@ -123,9 +140,15 @@
                     </a>
                 </li>
                 <li class="mobile-item">
-                    <a href="data.html" class="mobile-link">
-                        <i class="fas fa-download"></i>
-                        <span>Downloads</span>
+                    <a href="regulation.html" class="mobile-link">
+                        <i class="fas fa-gavel"></i>
+                        <span>Governance</span>
+                    </a>
+                </li> 
+                <li class="mobile-item">
+                    <a href="https://www.urbanswaras.co.ke/" class="mobile-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Duka La Swara</span>
                     </a>
                 </li>
                 <li class="mobile-item">
@@ -135,25 +158,19 @@
                     </a>
                 </li>
                 <li class="mobile-item">
-                  <a href="stories.html" class="mobile-link">
-                     <i class="fas fa-book-open"></i>
-                     <span>Our Stories</span>
-                  </a>
-                </li>
-                <li class="mobile-item">
-                    <a href="https://www.urbanswaras.co.ke/" class="mobile-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>Duka La Swara</span>
+                    <a href="data.html" class="mobile-link">
+                        <i class="fas fa-download"></i>
+                        <span>Downloads</span>
                     </a>
-                </li>
+                </li> 
             </ul>
             
-            <div class="mobile-cta">
+            <!-- <div class="mobile-cta">  
                 <button class="mobile-cta-button">
                     <i class="fas fa-user-plus"></i>
                     <span>Become a Member</span>
                 </button>
-            </div>
+            </div>-->
         </nav>
     </div>
 </header>
@@ -263,122 +280,7 @@
             color: var(--primary);
             margin-bottom: 20px;
             font-weight: 600;
-        }
-
-        .card-content {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--text);
-        }
-
-        .committee-section {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 50px;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 40px rgba(31, 60, 95, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .committee-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 30px;
-            text-align: center;
-            position: relative;
-        }
-
-        .committee-intro {
-            font-size: 1.2rem;
-            color: var(--text);
-            margin-bottom: 40px;
-            text-align: center;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .committee-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .committee-member {
-            background: linear-gradient(135deg, var(--light-bg), var(--white));
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            position: relative;
-        }
-
-        .committee-member:hover {
-            transform: translateY(-5px);
-            border-color: var(--secondary);
-            background: var(--white);
-        }
-
-        .member-role {
-            font-size: 1rem;
-            color: var(--secondary);
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .member-name {
-            font-size: 1.3rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .cre-section {
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            color: var(--white);
-            border-radius: 15px;
-            padding: 30px;
-            margin-top: 30px;
-        }
-
-        .cre-title {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .cre-members {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .cre-member {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 1rem;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .cre-member:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.05);
-        }
+        } 
 
         .documents-section {
             display: grid;
@@ -489,16 +391,7 @@
             .page-title {
                 font-size: 2.8rem;
             }
-
-            .committee-section {
-                padding: 30px;
-            }
-
-            .committee-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 20px;
-            }
-
+ 
             .documents-section {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -516,20 +409,7 @@
 
             .governance-card {
                 padding: 25px;
-            }
-
-            .committee-section {
-                padding: 20px;
-            }
-
-            .committee-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cre-members {
-                flex-direction: column;
-                align-items: center;
-            }
+            } 
         }
 
         .scroll-animation {
@@ -577,155 +457,7 @@
             </div>
         </div>
 
-        <div class="committee-section scroll-animation">
-            <h2 class="section-title">Club Management Structure</h2>
-            <p class="committee-intro">
-                The Club is governed by a constitution, and managed by a committee elected every two years. The club committee includes a Patron, Chairperson, Treasurer, Co-ordinator/Secretary, Trail King, and members of the Calendar, Routes and Events (CRE) Committee. The CRE Committee sets the club's calendar on a biannual basis with upcoming races in mind when determining distances of each weekly run, and is assisted by volunteers from among the members in scouting for interesting running locations.
-            </p>
-
-           <div class="organogram-container">
-            <div class="organogram-title">
-                <h3>Urban Swaras Running Club - Organogram</h3>
-            </div>
-
-            <!-- Patron Level -->
-            <div class="org-level patron-level">
-                <div class="org-card patron-card" data-position="patron">
-                    <div class="card-icon">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <div class="card-content">
-                        <h4 class="position-title">Patron</h4>
-                        <p class="position-name">Ajaa Obukai</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Connection Line -->
-            <div class="org-connection vertical-line"></div>
-
-            <!-- Chairperson Level -->
-            <div class="org-level chairperson-level">
-                <div class="org-card chairperson-card" data-position="chairperson">
-                    <div class="card-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="card-content">
-                        <h4 class="position-title">Chairperson</h4>
-                        <p class="position-name">Anthony Kiai</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Connection Lines to Committee -->
-            <div class="org-connections">
-                <div class="horizontal-line"></div>
-                <div class="vertical-branches">
-                    <div class="branch-line"></div>
-                    <div class="branch-line"></div>
-                    <div class="branch-line"></div>
-                    <div class="branch-line"></div>
-                </div>
-            </div>
-
-            <!-- Committee Level -->
-            <div class="org-level committee-level">
-                <div class="org-card committee-card" data-position="secretary">
-                    <div class="card-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <div class="card-content">
-                        <h4 class="position-title">Secretary / MC</h4>
-                        <p class="position-name">Winnie Okombo</p>
-                    </div>
-                </div>
-
-                <div class="org-card committee-card" data-position="trail-king">
-                    <div class="card-icon">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="card-content">
-                        <h4 class="position-title">Trail King (TR)</h4>
-                        <p class="position-name">Joseph Kamau</p>
-                    </div>
-                </div>
-
-                <div class="org-card committee-card" data-position="cre">
-                    <div class="card-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <div class="card-content">
-                        <h4 class="position-title">Calendar, Routes & Events (CRE)</h4>
-                        <p class="position-name">Various</p>
-                    </div>
-                </div>
-
-                <div class="org-card committee-card" data-position="treasurer">
-                    <div class="card-icon">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                    <div class="card-content">
-                        <h4 class="position-title">Treasurer / M1</h4>
-                        <p class="position-name">Gilbert Amondi</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Interactive Legend -->
-            <div class="organogram-legend">
-                <div class="legend-item">
-                    <div class="legend-color patron-color"></div>
-                    <span>Leadership</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color committee-color"></div>
-                    <span>Committee Members</span>
-                </div>
-            </div>
-        </div>
-        </div>
-    
-            <h3 style="text-align: center; color: var(--primary); font-size: 2rem; margin-bottom: 30px;">Current Committee (2023-2025)</h3>
-
-            <div class="committee-grid">
-                <div class="committee-member">
-                    <div class="member-role">Chairperson</div>
-                    <div class="member-name">Hon. Anthony Kiai</div>
-                </div>
-                <div class="committee-member">
-                    <div class="member-role">Treasurer</div>
-                    <div class="member-name">Gilbert Asamba</div>
-                </div>
-                <div class="committee-member">
-                    <div class="member-role">Coordinator/Secretary</div>
-                    <div class="member-name">Susan Okoma</div>
-                </div>
-                <div class="committee-member">
-                    <div class="member-role">Trail King</div>
-                    <div class="member-name">Joseph Masika</div>
-                </div>
-                <div class="committee-member">
-                    <div class="member-role">Trail Fox</div>
-                    <div class="member-name">Benjamin Chikani</div>
-                </div>
-            </div>
-
-            <div class="cre-section">
-                <h4 class="cre-title">Calendar, Routes and Events (CRE) Committee</h4>
-                <div class="cre-members">
-                    <span class="cre-member">Michael Nawari</span>
-                    <span class="cre-member">Shem Kiptoon</span>
-                    <span class="cre-member">Annika Berlin</span>
-                    <span class="cre-member">Carol Mungai</span>
-                    <span class="cre-member">Felicita Kagwanja</span>
-                    <span class="cre-member">Davis Gitari</span>
-                    <span class="cre-member">Joseph Gatonye</span>
-                    <span class="cre-member">Wanjau Muriu</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="documents-section">
+         <div class="documents-section">
             <div class="document-card scroll-animation">
                 <div class="document-icon">📜</div>
                 <h3 class="document-title">Club Constitution</h3>
@@ -744,7 +476,237 @@
                 <a href="documents/CLUB RULES AND REGULATIONS.PDF" class="document-link">View Rules</a>
             </div>
         </div>
+
+         
     </div>
+</div>
+     <div class="governance-container">
+        <div class="page-header">
+            <h1 class="page-title">Club Management Structure</h1>
+            <div class="decorative-line"></div>
+            <p class="page-subtitle">
+                The Club is governed by a constitution, and managed by a committee elected every two years.
+            </p>
+        </div>
+
+        <div class="committee-section scroll-animation">
+            <!-- Organogram for larger screens -->
+            <div class="organogram-container desktop-organogram">
+                <div class="organogram-title">
+                    <h3>Urban Swaras Running Club - Organogram</h3>
+                </div>
+
+                <!-- Patron Level -->
+                <div class="org-level patron-level">
+                    <div class="org-card patron-card" data-position="patron">
+                        <div class="card-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="position-title">Patron</h4>
+                            <p class="position-name">Ajaa Obukai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connection Line -->
+                <div class="org-connection vertical-line-container">
+                    <div class="vertical-line"></div>
+                </div>
+
+                <!-- Chairperson Level -->
+                <div class="org-level chairperson-level">
+                    <div class="org-card chairperson-card" data-position="chairperson">
+                        <div class="card-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="position-title">Chairperson</h4>
+                            <p class="position-name">Hon. Anthony Kiai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connection Lines to Committee -->
+                <div class="org-connections">
+                    <div class="horizontal-line"></div>
+                    <div class="vertical-branches">
+                        <div class="branch-line"></div>
+                        <div class="branch-line"></div>
+                        <div class="branch-line"></div>
+                        <div class="branch-line"></div>
+                    </div>
+                </div>
+
+                <!-- Committee Level -->
+                <div class="org-level committee-level">
+                    <div class="org-card committee-card" data-position="secretary">
+                        <div class="card-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="position-title">Secretary</h4>
+                            <p class="position-name">Susan Okoma</p>
+                        </div>
+                    </div>
+
+                    <div class="org-card committee-card" data-position="treasurer">
+                        <div class="card-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="position-title">Treasurer</h4>
+                            <p class="position-name">Gilbert Asamba</p>
+                        </div>
+                    </div>
+
+                    <div class="org-card committee-card" data-position="trail-king">
+                        <div class="card-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="position-title">Trail King</h4>
+                            <p class="position-name">Joseph Masika</p>
+                        </div>
+                    </div>
+
+                    <div class="org-card committee-card" data-position="trail-fox">
+                        <div class="card-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="position-title">Trail Fox</h4>
+                            <p class="position-name">Benjamin Chikani</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRE Committee Section -->
+                <div class="cre-connection">
+                    <div class="cre-vertical-line"></div>
+                </div>
+
+                <div class="cre-section-organogram">
+                    <div class="cre-header">
+                        <div class="cre-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4 class="cre-title">Calendar, Routes & Events Committee</h4>
+                    </div>
+                    <div class="cre-members-grid">
+                        <div class="cre-member-card">
+                            <span class="cre-member-name">Michael Nawari</span>
+                        </div>
+                        <div class="cre-member-card">
+                            <span class="cre-member-name">Shem Kiptoon</span>
+                        </div>
+                        <div class="cre-member-card">
+                            <span class="cre-member-name">Annika Berlin</span>
+                        </div>
+                        <div class="cre-member-card">
+                            <span class="cre-member-name">Carol Mungai</span>
+                        </div>
+                        <div class="cre-member-card">
+                            <span class="cre-member-name">Felicita Kagwanja</span>
+                        </div>
+                        <div class="cre-member-card">
+                            <span class="cre-member-name">Davis Gitari</span>
+                        </div>
+                        <div class="cre-member-card">
+                            <span class="cre-member-name">Joseph Gatonye</span>
+                        </div>
+                        <div class="cre-member-card">
+                            <span class="cre-member-name">Wanjau Muriu</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Legend -->
+                <div class="organogram-legend">
+                    <div class="legend-item">
+                        <div class="legend-color patron-color"></div>
+                        <span>Leadership</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color committee-color"></div>
+                        <span>Committee Members</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color cre-color"></div>
+                        <span>CRE Committee</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text-based committee list for mobile -->
+            <div class="mobile-committee-list">
+                <div class="committee-title">
+                    <h3>Club Management Committee</h3>
+                    <p class="committee-subtitle">Current Term: 2023-2025</p>
+                </div>
+
+                <div class="leadership-section">
+                    <h4 class="section-header">
+                        <i class="fas fa-crown"></i>
+                        Leadership
+                    </h4>
+                    <div class="member-list">
+                        <div class="member-item">
+                            <span class="member-position">Patron</span>
+                            <span class="member-name">Ajaa Obukai</span>
+                        </div>
+                        <div class="member-item">
+                            <span class="member-position">Chairperson</span>
+                            <span class="member-name">Hon. Anthony Kiai</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="committee-members-section">
+                    <h4 class="section-header">
+                        <i class="fas fa-users"></i>
+                        Committee Members
+                    </h4>
+                    <div class="member-list">
+                        <div class="member-item">
+                            <span class="member-position">Secretary</span>
+                            <span class="member-name">Susan Okoma</span>
+                        </div>
+                        <div class="member-item">
+                            <span class="member-position">Treasurer</span>
+                            <span class="member-name">Gilbert Asamba</span>
+                        </div>
+                        <div class="member-item">
+                            <span class="member-position">Trail King</span>
+                            <span class="member-name">Joseph Masika</span>
+                        </div>
+                        <div class="member-item">
+                            <span class="member-position">Trail Fox</span>
+                            <span class="member-name">Benjamin Chikani</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cre-members-section">
+                    <h4 class="section-header">
+                        <i class="fas fa-calendar-check"></i>
+                        Calendar, Routes & Events Committee
+                    </h4>
+                    <div class="cre-member-list">
+                        <div class="cre-member-item">Michael Nawari</div>
+                        <div class="cre-member-item">Shem Kiptoon</div>
+                        <div class="cre-member-item">Annika Berlin</div>
+                        <div class="cre-member-item">Carol Mungai</div>
+                        <div class="cre-member-item">Felicita Kagwanja</div>
+                        <div class="cre-member-item">Davis Gitari</div>
+                        <div class="cre-member-item">Joseph Gatonye</div>
+                        <div class="cre-member-item">Wanjau Muriu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
  
 <footer class="site-footer">
     <div class="footer-container">
@@ -752,12 +714,7 @@
         <div class="footer-column">
             <h3 class="footer-heading">Urban Swaras</h3>
             <p class="footer-about">Nairobi's premier running community since 2006. Promoting recreational running and building friendships through shared miles.</p>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Strava"><i class="fab fa-strava"></i></a>
-                <a href="#" aria-label="Garmin"><i class="fas fa-running"></i></a>
-            </div>
+        
         </div>
 
         <!-- Column 2: Quick Links -->
@@ -766,34 +723,47 @@
             <ul class="footer-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="calendar.html">Events</a></li>
-                <li><a href="members.html">Membership</a></li>
-                <li><a href="regulation.html">Governance</a></li>
-                <li><a href="data.html">Downloads</a></li>
+                <li><a href="stories.html">Our Stories</a></li>
+                <li><a href="members.html">Membership</a></li> 
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="https://www.urbanswaras.co.ke/">Duka La Swara</a></li>
             </ul>
         </div>
 
         <!-- Column 3: Contact -->
-        <div class="footer-column">
-            <h3 class="footer-heading">Contact Us</h3>
-            <ul class="footer-contact">
-                <li><i class="fas fa-phone-alt"></i> +254740894117</li>
-                <li><i class="fas fa-envelope"></i> info@urbanswaras.co.ke</li>
-                <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
-                <li><i class="fas fa-clock"></i> Runs every Saturday 6:30 AM</li>
-            </ul>
-        </div>
+<div class="footer-column">
+    
+    <h3 class="footer-heading">Contact Us</h3>
+    <ul class="footer-contact">
+        <li><i class="fas fa-phone-alt"></i> +254740894117</li>
+        <li><i class="fas fa-envelope"></i> info@urbanswaras.co.ke</li>
+    </ul>
+    <div class="footer-social">
+        <a href="https://www.facebook.com/urbanswaras" aria-label="Facebook" class="facebook-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a><div class="contact-social">
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a></div>
+        <a href="https://www.strava.com/clubs/244473" aria-label="Strava" class="strava-icon">
+            <i class="fab fa-strava"></i>
+        </a>
+        <a href="https://connect.garmin.com/modern/group/18200" aria-label="Garmin" class="garmin-icon">
+            <i class="fas fa-running"></i>
+        </a>
+    </div>
+</div>
 
         <!-- Column 4: Newsletter -->
-        <div class="footer-column">
-            <h3 class="footer-heading">Stay Updated</h3>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-            <p class="footer-notes">Get notified about upcoming runs and events.</p>
-        </div>
+       <div class="footer-column">
+         <h3 class="footer-heading">Stay Updated</h3>
+         <form class="newsletter-form" action="https://formspree.io/f/mkgbvjey" method="POST">
+             <input type="email" name="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+         </form>
+              <p class="footer-notes">Get notified about upcoming runs and events.</p>
+      </div>
+    </div>
     </div>
 
     <div class="footer-bottom">
