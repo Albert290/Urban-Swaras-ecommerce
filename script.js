@@ -1,89 +1,140 @@
- // Mobile menu functionality
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileOverlay = document.getElementById('mobileOverlay');
-        const closeMenu = document.getElementById('closeMenu');
+ 
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const closeMenu = document.getElementById('closeMenu');
+
+    // Check if elements exist before adding event listeners
+    if (!hamburger || !mobileMenu || !mobileOverlay) {
+        console.warn('Mobile menu elements not found');
+        return;
+    }
+
+    function openMobileMenu() {
+        mobileMenu.classList.add('active');
+        mobileOverlay.classList.add('active');
+        hamburger.classList.add('active');
+        document.body.classList.add('no-scroll');
         
-        function openMobileMenu() {
-            mobileMenu.classList.add('active');
-            mobileOverlay.classList.add('active');
-            hamburger.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeMobileMenu() {
-            mobileMenu.classList.remove('active');
-            mobileOverlay.classList.remove('active');
-            hamburger.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        
-        // Event listeners
-        hamburger.addEventListener('click', openMobileMenu);
-        closeMenu.addEventListener('click', closeMobileMenu);
-        mobileOverlay.addEventListener('click', closeMobileMenu);
-        
-        // Close menu when clicking on a link
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+        // Reset animations
+        const mobileItems = document.querySelectorAll('.mobile-links li');
+        mobileItems.forEach((item, index) => {
+            item.style.animation = 'none';
+            setTimeout(() => {
+                item.style.animation = `slideIn 0.3s forwards`;
+                item.style.animationDelay = `${0.1 + (index * 0.05)}s`;
+            }, 10);
         });
-        
-        // Close menu on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+    }
+
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
+
+    // Event listeners
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        openMobileMenu();
+    });
+
+    if (closeMenu) {
+        closeMenu.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeMobileMenu();
+        });
+    }
+
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', function() {
+            // Only close menu if it's not an external link
+            if (!this.hasAttribute('target')) {
                 closeMobileMenu();
             }
         });
-        
-        // Active page highlighting (simulate)
-        function setActivePage() {
-            const currentPage = window.location.pathname;
-            const navItems = document.querySelectorAll('.nav-item, .mobile-item');
-            
-            navItems.forEach(item => {
-                const link = item.querySelector('a');
-                if (link && link.getAttribute('href') === currentPage) {
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+
+    // Active page highlighting
+    function setActivePage() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navItems = document.querySelectorAll('.nav-item, .mobile-item');
+
+        navItems.forEach(item => {
+            const link = item.querySelector('a');
+            if (link) {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
                     item.classList.add('active');
                 } else {
                     item.classList.remove('active');
                 }
-            });
-        }
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
+            }
         });
-        
-        // Header scroll effect
-        let lastScrollTop = 0;
-        const header = document.querySelector('.main-header');
-        
-        window.addEventListener('scroll', () => {
+    }
+
+    // Set active page on load
+    setActivePage();
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                closeMobileMenu(); // Close menu after smooth scroll
+            }
+        });
+    });
+
+    // Header scroll effect
+    let lastScrollTop = 0;
+    const header = document.querySelector('.main-header');
+
+    if (header) {
+        window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
+
             if (scrollTop > lastScrollTop && scrollTop > 100) {
                 header.classList.add('scrolled-down');
             } else {
                 header.classList.remove('scrolled-down');
             }
-            
+
             if (scrollTop > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
-            
-            lastScrollTop = scrollTop;
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
         });
+    }
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 992 && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+});
 
 
 // Animation for hero section
@@ -414,3 +465,4 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollTimeout = setTimeout(highlightTimeline, 10);
     });
 });
+

@@ -28,132 +28,146 @@
         </div>
     </div>
     
-    <!-- Main Header -->
-    <header class="main-header">
-        <div class="header-container">
-            <div class="logo-section">
-                <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
-               
-            </div>
-            
-            <nav class="desktop-nav">
-                <ul class="nav-links">
-                    <li class="nav-item active">
-                        <a href="index.html" class="nav-link">
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="calendar.html" class="nav-link">
-                            <span>Events</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="regulation.html" class="nav-link">
-                            <span>Governance</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="members.html" class="nav-link">
-                            <span>Membership</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="data.html" class="nav-link">
-                            <span>Downloads</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link">
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="https://www.urbanswaras.co.ke/" class="nav-link" target="_blank" rel="noopener noreferrer">
+   <!-- Main Header -->
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
+        </div>
+        
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link">
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="regulation.html" class="nav-link">
+                        <span>Governance</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="members.html" class="nav-link">
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="data.html" class="nav-link">
+                        <span>Downloads</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="stories.html" class="nav-link">
+                        <span>Our Stories</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.urbanswaras.co.ke/" class="nav-link" target="_blank" rel="noopener noreferrer">
+                    <span>Duka La Swara</span>
+                  </a>
+                </li> 
+            </ul>
+        </nav>
+        
+        <div class="header-actions"> 
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="closeMenu">
+                <span>&times;</span>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul class="mobile-links">
+                <li class="mobile-item active">
+                    <a href="index.html" class="mobile-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="calendar.html" class="mobile-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="regulation.html" class="mobile-link">
+                        <i class="fas fa-gavel"></i>
+                        <span>Governance</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="members.html" class="mobile-link">
+                        <i class="fas fa-users"></i>
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="data.html" class="mobile-link">
+                        <i class="fas fa-download"></i>
+                        <span>Downloads</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="contact.html" class="mobile-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="contact.html" class="mobile-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                  <a href="stories.html" class="mobile-link">
+                     <i class="fas fa-book-open"></i>
+                     <span>Our Stories</span>
+                  </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="https://www.urbanswaras.co.ke/" class="mobile-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-shopping-cart"></i>
                         <span>Duka La Swara</span>
-                      </a>
-                    </li> 
-                </ul>
-            </nav>
+                    </a>
+                </li>
+            </ul>
             
-            <div class="header-actions"> 
-                
-                <button class="hamburger" id="hamburger">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
+            <div class="mobile-cta">
+                <button class="mobile-cta-button">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Become a Member</span>
                 </button>
             </div>
-        </div>
-        
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay" id="mobileOverlay"></div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="mobile-menu-header">
-                <h3>Menu</h3>
-                <button class="close-menu" id="closeMenu">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <nav class="mobile-nav">
-                <ul class="mobile-links">
-                    <li class="mobile-item active">
-                        <a href="index.html" class="mobile-link">
-                            <i class="fas fa-home"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li class="mobile-item">
-                        <a href="calendar.html" class="mobile-link">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>Events</span>
-                        </a>
-                    </li>
-                    <li class="mobile-item">
-                        <a href="regulation.html" class="mobile-link">
-                            <i class="fas fa-gavel"></i>
-                            <span>Governance</span>
-                        </a>
-                    </li>
-                    <li class="mobile-item">
-                        <a href="members.html" class="mobile-link">
-                            <i class="fas fa-users"></i>
-                            <span>Membership</span>
-                        </a>
-                    </li>
-                    <li class="mobile-item">
-                        <a href="data.html" class="mobile-link">
-                            <i class="fas fa-download"></i>
-                            <span>Downloads</span>
-                        </a>
-                    </li>
-                    <li class="mobile-item">
-                        <a href="contact.html" class="mobile-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                    <li class="mobile-item">
-                        <a href="#" class="mobile-link">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>Shop</span>
-                            <span class="mobile-cart-badge">3</span>
-                        </a>
-                    </li>
-                </ul>
-                
-                <div class="mobile-cta">
-                    <button class="mobile-cta-button">
-                        <i class="fas fa-user-plus"></i>
-                        <span>Become a Member</span>
-                    </button>
-                </div>
-            </nav>
-        </div>
-    </header>
+        </nav>
+    </div>
+</header>
  
    <section class="hero">
         <div class="floating-elements">
@@ -201,7 +215,7 @@
                     <span class="label">Years Running</span>
                 </div>
                 <div class="achievement-item">
-                    <span class="number" data-count="52">0</span>
+                    <span class="number" data-count="800">0</span>
                     <span class="label">Events Yearly</span>
                 </div>
                 <div class="achievement-item">
@@ -391,7 +405,7 @@
             <h3 class="footer-heading">Contact Us</h3>
             <ul class="footer-contact">
                 <li><i class="fas fa-phone-alt"></i> +254740894117</li>
-                <li><i class="fas fa-envelope"></i> urbanswarasrunningclub@gmail.com</li>
+                <li><i class="fas fa-envelope"></i> info@urbanswaras.co.ke</li>
                 <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
                 <li><i class="fas fa-clock"></i> Runs every Saturday 6:30 AM</li>
             </ul>
