@@ -138,119 +138,119 @@ document.addEventListener('DOMContentLoaded', function() {
 
       
 // Media links data
-        const mediaLinks = [
-            {
-                url: 'https://urbanswaras.co.ke/wp-content/uploads/2019/11/USRC-Newsletter-November-2019.pdf',
-                title: 'USRC Newsletter - November 2019',
-                description: 'Official Urban Swaras Running Club newsletter featuring member highlights and club updates.'
-            },
-            {
-                url: 'https://www.businessdailyafrica.com/bd/lifestyle/touring-kenya-through-the-sporting-calendar--2044200',
-                title: 'Touring Kenya Through The Sporting Calendar',
-                description: 'Business Daily Africa feature on Kenya\'s sporting events and running culture.'
-            },
-            {
-                url: 'https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/victor-kamau-s-nine-year-ultra-run-addiction--4514092',
-                title: 'Victor Kamau\'s Nine-Year Ultra Run Addiction',
-                description: 'In-depth profile of Victor Kamau and his journey in ultra-running.'
-            },
-            {
-                url: 'https://www.businessdailyafrica.com/bd/lifestyle/the-running-clubs-taking-over-nairobi-3865094',
-                title: 'The Running Clubs Taking Over Nairobi',
-                description: 'Feature article about the growing running club culture in Nairobi, including Urban Swaras.'
-            },
-            {
-                url: 'https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/urban-swaras-a-running-club-changing-lives--2243486#google_vignette',
-                title: 'Urban Swaras: A Running Club Changing Lives',
-                description: 'Comprehensive coverage of how Urban Swaras is transforming lives through running.'
-            }
-        ];
+     // Media links data
+const mediaLinks = [
+    {
+        url: 'https://urbanswaras.co.ke/wp-content/uploads/2019/11/USRC-Newsletter-November-2019.pdf',
+        title: 'USRC Newsletter - November 2019',
+        description: 'Official Urban Swaras Running Club newsletter featuring member highlights and club updates.'
+    },
+    {
+        url: 'https://www.businessdailyafrica.com/bd/lifestyle/touring-kenya-through-the-sporting-calendar--2044200',
+        title: 'Touring Kenya Through The Sporting Calendar',
+        description: 'Business Daily Africa feature on Kenya\'s sporting events and running culture.'
+    },
+    {
+        url: 'https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/victor-kamau-s-nine-year-ultra-run-addiction--4514092',
+        title: 'Victor Kamau\'s Nine-Year Ultra Run Addiction',
+        description: 'In-depth profile of Victor Kamau and his journey in ultra-running.'
+    },
+    {
+        url: 'https://www.businessdailyafrica.com/bd/lifestyle/the-running-clubs-taking-over-nairobi-3865094',
+        title: 'The Running Clubs Taking Over Nairobi',
+        description: 'Feature article about the growing running club culture in Nairobi, including Urban Swaras.'
+    },
+    {
+        url: 'https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/urban-swaras-a-running-club-changing-lives--2243486#google_vignette',
+        title: 'Urban Swaras: A Running Club Changing Lives',
+        description: 'Comprehensive coverage of how Urban Swaras is transforming lives through running.'
+    }
+];
 
-        // Video links data
-        const videoLinks = [
-            {
-                url: 'https://youtu.be/YXBnN7L19iY?si=HbOtrctrwL-4xx09',
-                title: 'Urban Swaras Training Session',
-                description: 'Join us for an exciting training session with the Urban Swaras running community.'
-            },
-            {
-                url: 'https://youtu.be/4-ke31svONg?si=ZLm3ru0fyvCN5-8F',
-                title: 'Marathon Preparation Journey',
-                description: 'Follow our members as they prepare for their marathon challenges.'
-            },
-            {
-                url: 'https://youtu.be/EmHsqz9USio?si=HQSGmSC9ZkXg9EoP',
-                title: 'Community Running Event',
-                description: 'Highlights from our community running event and member experiences.'
-            },
-            {
-                url: 'https://youtu.be/5UVdYSZR3wY?si=fmGtIbwgOosd0_J5',
-                title: 'Runner Success Stories',
-                description: 'Inspiring success stories from Urban Swaras running club members.'
-            }
-        ];
+// Video links data
+const videoLinks = [
+    {
+        url: 'https://youtu.be/YXBnN7L19iY?si=HbOtrctrwL-4xx09',
+        title: 'Urban Swaras Training Session',
+        description: 'Join us for an exciting training session with the Urban Swaras running community.'
+    },
+    {
+        url: 'https://youtu.be/4-ke31svONg?si=ZLm3ru0fyvCN5-8F',
+        title: 'Marathon Preparation Journey',
+        description: 'Follow our members as they prepare for their marathon challenges.'
+    },
+    {
+        url: 'https://youtu.be/EmHsqz9USio?si=HQSGmSC9ZkXg9EoP',
+        title: 'Community Running Event',
+        description: 'Highlights from our community running event and member experiences.'
+    },
+    {
+        url: 'https://youtu.be/5UVdYSZR3wY?si=fmGtIbwgOosd0_J5',
+        title: 'Runner Success Stories',
+        description: 'Inspiring success stories from Urban Swaras running club members.'
+    }
+];
 
-        // Show media links modal
-        function showMediaLinks() {
-            const modal = document.getElementById('mediaModal');
-            const linksContainer = document.getElementById('mediaLinks');
-           
-            linksContainer.innerHTML = '';
-           
-            mediaLinks.forEach(link => {
-                const linkElement = document.createElement('a');
-                linkElement.href = link.url;
-                linkElement.target = '_blank';
-                linkElement.className = 'media-link';
-                linkElement.innerHTML = `
-                    <div class="link-title"><i class="fas fa-external-link-alt"></i> <span class="math-inline">\{link\.title\}</div\>
-<div class\="link\-description"\></span>{link.description}</div>
-                `;
-                linksContainer.appendChild(linkElement);
-            });
-           
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+// Show media links modal
+function showMediaLinks() {
+    const modal = document.getElementById('mediaModal');
+    const linksContainer = document.getElementById('mediaLinks');
+   
+    linksContainer.innerHTML = '';
+   
+    mediaLinks.forEach(link => {
+        const linkElement = document.createElement('a');
+        linkElement.href = link.url;
+        linkElement.target = '_blank';
+        linkElement.className = 'media-link';
+        linkElement.innerHTML = `
+            <div class="link-title"><i class="fas fa-external-link-alt"></i> ${link.title}</div>
+            <div class="link-description">${link.description}</div>
+        `;
+        linksContainer.appendChild(linkElement);
+    });
+   
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Show video links modal
+function showVideoLinks() {
+    const modal = document.getElementById('videoModal');
+    const linksContainer = document.getElementById('videoLinks');
+   
+    linksContainer.innerHTML = '';
+   
+    videoLinks.forEach(link => {
+        const linkElement = document.createElement('a');
+        linkElement.href = link.url;
+        linkElement.target = '_blank';
+        linkElement.className = 'media-link';
+        linkElement.innerHTML = `
+            <div class="link-title"><i class="fab fa-youtube"></i> ${link.title}</div>
+            <div class="link-description">${link.description}</div>
+        `;
+        linksContainer.appendChild(linkElement);
+    });
+   
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close modal
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+document.querySelectorAll('.modal-overlay').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal(this.id);
         }
-
-        // Show video links modal
-        function showVideoLinks() {
-            const modal = document.getElementById('videoModal');
-            const linksContainer = document.getElementById('videoLinks');
-           
-            linksContainer.innerHTML = '';
-           
-            videoLinks.forEach(link => {
-                const linkElement = document.createElement('a');
-                linkElement.href = link.url;
-                linkElement.target = '_blank';
-                linkElement.className = 'media-link';
-                linkElement.innerHTML = `
-                    <div class="link-title"><i class="fab fa-youtube"></i> <span class="math-inline">\{link\.title\}</div\>
-<div class\="link\-description"\></span>{link.description}</div>
-                `;
-                linksContainer.appendChild(linkElement);
-            });
-           
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Close modal
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        document.querySelectorAll('.modal-overlay').forEach(modal => {
-            modal.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeModal(this.id);
-                }
-            });
-        });
-
+    });
+});
         // File upload handling
         const fileInput = document.getElementById('fileInput');
         const fileUploadArea = document.getElementById('fileUploadArea');
