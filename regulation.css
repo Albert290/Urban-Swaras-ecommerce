@@ -870,8 +870,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    justify-content: center; 
 }
 
 .org-card:hover {
@@ -978,17 +977,16 @@ body {
 }
 
 .horizontal-line {
-    width: 280px;
+    width: 680px;
     height: 3px;
-    background: var(--secondary);
-    margin-bottom: 8px;
+    background: var(--secondary); 
     border-radius: 2px;
 }
 
 .vertical-branches {
     display: flex;
     justify-content: space-between;
-    width: 280px;
+    width: 680px;
 }
 
 .branch-line {
