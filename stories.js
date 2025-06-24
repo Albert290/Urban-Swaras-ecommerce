@@ -140,11 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // Media links data
      // Media links data
 const mediaLinks = [
-    {
+   /* {
         url: 'https://urbanswaras.co.ke/wp-content/uploads/2019/11/USRC-Newsletter-November-2019.pdf',
         title: 'USRC Newsletter - November 2019',
         description: 'Official Urban Swaras Running Club newsletter featuring member highlights and club updates.'
-    },
+    },*/
     {
         url: 'https://www.businessdailyafrica.com/bd/lifestyle/touring-kenya-through-the-sporting-calendar--2044200',
         title: 'Touring Kenya Through The Sporting Calendar',
