@@ -224,6 +224,31 @@
     }
 }
 
+
+/* Additional enhancement for very small screens */
+@media (max-width: 360px) {
+    .next-event span {
+        margin-right: 5px;
+    }
+    
+    .contact-social {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .phone {
+        order: 2;
+    }
+    
+    .social-icons {
+        order: 1;
+    }
+    
+    .register-btn {
+        order: 3;
+        margin-top: 5px;
+    }
+}
         
 /* Main Header */
 header {
@@ -535,6 +560,96 @@ header {
     margin-right: 10px;
     width: 20px;
     text-align: center;
+}
+
+/* Mobile CTA */
+.mobile-cta {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.mobile-cta-button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-cta-button:hover {
+    background-color: var(--primary);
+}
+
+.mobile-cta-button i {
+    margin-right: 8px;
+}
+
+/* Disable scrolling when menu is open */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Animations */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Staggered animation for menu items */
+.mobile-links li:nth-child(1) { animation-delay: 0.1s; }
+.mobile-links li:nth-child(2) { animation-delay: 0.15s; }
+.mobile-links li:nth-child(3) { animation-delay: 0.2s; }
+.mobile-links li:nth-child(4) { animation-delay: 0.25s; }
+.mobile-links li:nth-child(5) { animation-delay: 0.3s; }
+.mobile-links li:nth-child(6) { animation-delay: 0.35s; }
+.mobile-links li:nth-child(7) { animation-delay: 0.4s; }
+
+/* Responsive - Show hamburger on mobile */
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .desktop-nav {
+        display: none;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        padding: 8px 5%;
+    }
+    
+    .next-event {
+        margin-bottom: 8px;
+    }
+    
+    .contact-social {
+        flex-direction: column;
+    }
+    
+    .phone {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    
+    .social-icons a {
+        margin: 0 8px;
+    }
 }
 
 

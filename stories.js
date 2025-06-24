@@ -1,4 +1,5 @@
  
+ 
 // Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
@@ -135,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
  // Modal functionality
         class ModalManager {
