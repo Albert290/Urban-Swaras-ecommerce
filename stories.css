@@ -608,7 +608,7 @@ header {
 
 .modal-content {
     background-color: var(--white, #FFFFFF);
-    margin: 5% auto;
+    margin: auto;
     padding: 0;
     border-radius: 15px;
     width: 90%;
@@ -617,19 +617,22 @@ header {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     animation: modalSlideIn 0.3s ease-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes modalSlideIn {
     from {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translate(-50%, -50%) translateY(-50px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(-50%, -50%);
     }
 }
-
 .modal-header {
     background-color: var(--primary, #1F3C5F);
     color: var(--white, #FFFFFF);
