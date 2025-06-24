@@ -136,246 +136,353 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Blog links data
-const blogLinks = [
-    {
-        title: "Touring Kenya Through The Sporting Calendar",
-        description: "Business Daily Africa feature on Kenya's sporting events and running culture.",
-        url: "https://drive.google.com/file/d/1xigsjojfY5yLzirVp9taOWx5hhlManUh/view",
-        icon: "fas fa-external-link-alt"
-    },
-    {
-        title: "USRC Newsletter - November 2019",
-        description: "Latest updates and highlights from Urban Swaras Running Club community.",
-        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/11/USRC-Newsletter-November-2019.pdf",
-        icon: "fas fa-file-pdf"
-    },
-    {
-        title: "USRC Newsletter - August 2019",
-        description: "Monthly newsletter featuring training tips and community stories.",
-        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/08/USRC_Newsletter_August_2019.pdf",
-        icon: "fas fa-file-pdf"
-    },
-    {
-        title: "USRC Newsletter - June 2019",
-        description: "Mid-year highlights and upcoming events from our running community.",
-        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/06/USRC-Newsletter-June-2019.pdf",
-        icon: "fas fa-file-pdf"
-    },
-    {
-        title: "USRC Newsletter - March 2019",
-        description: "Spring edition with race results and training achievements.",
-        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/03/USRC-Newsletter-March-2019.pdf",
-        icon: "fas fa-file-pdf"
-    },
-    {
-        title: "USRC Newsletter - January 2019",
-        description: "New year edition featuring goals and community resolutions.",
-        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/03/USRC-Newsletter-January-2019.pdf",
-        icon: "fas fa-file-pdf"
-    },
-    {
-        title: "USRC Newsletter - December 2018",
-        description: "Year-end wrap-up with achievements and holiday greetings.",
-        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/01/USRC-Newsletter-December-2018.pdf",
-        icon: "fas fa-file-pdf"
-    },
-    {
-        title: "USRC Newsletter - October 2018",
-        description: "Fall edition with seasonal training tips and event highlights.",
-        url: "https://urbanswaras.co.ke/wp-content/uploads/2018/11/USRC-Newsletter-October-2018.pdf",
-        icon: "fas fa-file-pdf"
-    },
-    {
-        title: "USRC Newsletter - August 2018",
-        description: "Summer newsletter featuring community activities and achievements.",
-        url: "https://urbanswaras.co.ke/wp-content/uploads/2018/08/USRC-Newsletter-August-2018.pdf",
-        icon: "fas fa-file-pdf"
-    }
-];
-
-// Modal functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('blogsModal');
-    const readAllBtn = document.getElementById('readAllBlogsBtn');
-    const closeBtn = document.querySelector('.close-btn');
-    const blogItems = document.querySelectorAll('.blog-item');
-
-    // Show modal when clicking "Read All Blogs" button
-    if (readAllBtn) {
-        readAllBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            showModal();
-        });
-    }
-
-    // Close modal when clicking the close button
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-            hideModal();
-        });
-    }
-
-    // Close modal when clicking outside of it
-    modal.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            hideModal();
-        }
-    });
-
-    // Add click handlers to blog items
-    blogItems.forEach(function(item, index) {
-        item.addEventListener('click', function() {
-            if (blogLinks[index] && blogLinks[index].url) {
-                window.open(blogLinks[index].url, '_blank');
+ // Modal functionality
+        class ModalManager {
+            constructor() {
+                this.initializeEventListeners();
+                this.setupKeyboardEvents();
             }
+
+            initializeEventListeners() {
+                // Blog modal
+                const blogBtn = document.getElementById('readAllBlogsBtn');
+                const blogModal = document.getElementById('blogsModal');
+                
+                // Media modal
+                const mediaBtn = document.getElementById('viewMediaBtn');
+                const mediaModal = document.getElementById('mediaModal');
+                
+                // Videos modal
+                const videosBtn = document.getElementById('watchVideosBtn');
+                const videosModal = document.getElementById('videosModal');
+
+                // Button click events
+                if (blogBtn) {
+                    blogBtn.addEventListener('click', () => this.openModal('blogsModal'));
+                }
+                
+                if (mediaBtn) {
+                    mediaBtn.addEventListener('click', () => this.openModal('mediaModal'));
+                }
+                
+                if (videosBtn) {
+                    videosBtn.addEventListener('click', () => this.openModal('videosModal'));
+                }
+
+                // Close button events
+                const closeButtons = document.querySelectorAll('.close-btn');
+                closeButtons.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const modalId = e.target.getAttribute('data-modal');
+                        if (modalId) {
+                            this.closeModal(modalId);
+                        }
+                    });
+                });
+
+                // Close modal when clicking outside
+                window.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('modal')) {
+                        this.closeModal(e.target.id);
+                    }
+                });
+            }
+
+            setupKeyboardEvents() {
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        const openModal = document.querySelector('.modal[style*="block"]');
+                        if (openModal) {
+                            this.closeModal(openModal.id);
+                        }
+                    }
+                });
+            }
+
+            openModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Add smooth entrance animation
+                    setTimeout(() => {
+                        modal.style.opacity = '1';
+                    }, 10);
+                }
+            }
+
+            closeModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+
+        // Animation on scroll
+        class ScrollAnimations {
+            constructor() {
+                this.initializeIntersectionObserver();
+            }
+
+            initializeIntersectionObserver() {
+                const options = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.animationDelay = '0.1s';
+                            entry.target.style.animationFillMode = 'both';
+                            entry.target.classList.add('animate-in');
+                        }
+                    });
+                }, options);
+
+                // Observe story columns
+                const storyColumns = document.querySelectorAll('.story-column');
+                storyColumns.forEach((column, index) => {
+                    column.style.animationDelay = `${index * 0.2}s`;
+                    observer.observe(column);
+                });
+            }
+        }
+
+        // Enhanced button interactions
+        class ButtonEnhancements {
+            constructor() {
+                this.initializeButtonEffects();
+            }
+
+            initializeButtonEffects() {
+                const buttons = document.querySelectorAll('.view-all-btn');
+                
+                buttons.forEach(button => {
+                    // Add ripple effect on click
+                    button.addEventListener('click', (e) => {
+                        this.createRippleEffect(e, button);
+                    });
+
+                    // Add hover sound effect (visual feedback)
+                    button.addEventListener('mouseenter', () => {
+                        button.style.transform = 'translateY(-3px) scale(1.02)';
+                    });
+
+                    button.addEventListener('mouseleave', () => {
+                        button.style.transform = 'translateY(0) scale(1)';
+                    });
+                });
+            }
+
+            createRippleEffect(event, button) {
+                const ripple = document.createElement('span');
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = event.clientX - rect.left - size / 2;
+                const y = event.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                button.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            }
+        }
+
+        // Utility functions for external link handling
+        class LinkManager {
+            constructor() {
+                this.setupLinkHandlers();
+            }
+
+            setupLinkHandlers() {
+                // Handle blog links
+                const blogItems = document.querySelectorAll('.blog-item');
+                blogItems.forEach((item, index) => {
+                    item.addEventListener('click', () => {
+                        this.handleBlogLink(index);
+                    });
+                });
+
+                // Handle media links
+                const mediaItems = document.querySelectorAll('.media-item');
+                mediaItems.forEach((item, index) => {
+                    item.addEventListener('click', () => {
+                        this.handleMediaLink(index);
+                    });
+                });
+
+                // Handle video links
+                const videoItems = document.querySelectorAll('.video-item');
+                videoItems.forEach((item, index) => {
+                    item.addEventListener('click', () => {
+                        this.handleVideoLink(index);
+                    });
+                });
+            }
+
+            handleBlogLink(index) {
+                // Define your blog URLs here
+                const blogUrls = [
+                    'https://urbanswaras.com/blog/marathon-training-guide',
+                    'https://urbanswaras.com/blog/couch-to-5k-sarah-journey',
+                    'https://urbanswaras.com/blog/nairobi-marathon-recap',
+                    'https://urbanswaras.com/blog/building-community-running'
+                ];
+                
+                if (blogUrls[index]) {
+                    window.open(blogUrls[index], '_blank');
+                } else {
+                    console.log(`Blog link ${index + 1} clicked - Add your URL here`);
+                }
+            }
+
+            handleMediaLink(index) {
+                // Define your media URLs here
+                const mediaUrls = [
+                    'https://www.businessdailyafrica.com/bd/lifestyle/travel/touring-kenya-through-the-sporting-calendar',
+                    'https://urbanswaras.com/media/newsletter-nov-2019.pdf',
+                    'https://urbanswaras.com/media/newsletter-aug-2019.pdf',
+                    'https://urbanswaras.com/media/newsletter-jun-2019.pdf',
+                    'https://www.nation.co.ke/kenya/sports/urban-swaras-running-culture'
+                ];
+                
+                if (mediaUrls[index]) {
+                    window.open(mediaUrls[index], '_blank');
+                } else {
+                    console.log(`Media link ${index + 1} clicked - Add your URL here`);
+                }
+            }
+
+            handleVideoLink(index) {
+                // Define your video URLs here
+                const videoUrls = [
+                    'https://youtube.com/watch?v=training-highlights',
+                    'https://youtube.com/watch?v=ngong-hills-trail',
+                    'https://youtube.com/watch?v=member-testimonials',
+                    'https://youtube.com/watch?v=nairobi-marathon-2023'
+                ];
+                
+                if (videoUrls[index]) {
+                    window.open(videoUrls[index], '_blank');
+                } else {
+                    console.log(`Video link ${index + 1} clicked - Add your URL here`);
+                }
+            }
+        }
+
+        // Performance optimization
+        class PerformanceOptimizer {
+            constructor() {
+                this.optimizeImages();
+                this.setupLazyLoading();
+            }
+
+            optimizeImages() {
+                // Add loading="lazy" to any images that might be added later
+                const images = document.querySelectorAll('img');
+                images.forEach(img => {
+                    if (!img.hasAttribute('loading')) {
+                        img.setAttribute('loading', 'lazy');
+                    }
+                });
+            }
+
+            setupLazyLoading() {
+                // Lazy load modal content
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    modal.style.willChange = 'transform, opacity';
+                });
+            }
+        }
+
+        // Initialize all classes when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize all functionality
+            const modalManager = new ModalManager();
+            const scrollAnimations = new ScrollAnimations();
+            const buttonEnhancements = new ButtonEnhancements();
+            const linkManager = new LinkManager();
+            const performanceOptimizer = new PerformanceOptimizer();
+
+            // Add smooth scrolling for any anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading state management
+            window.addEventListener('load', () => {
+                document.body.classList.add('loaded');
+            });
+
+            console.log('Urban Swaras Stories Section initialized successfully!');
         });
-    });
 
-    // Handle escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && modal.style.display === 'block') {
-            hideModal();
-        }
-    });
-
-    // Show modal function
-    function showModal() {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent body scroll
-        
-        // Add animation class
-        const modalContent = modal.querySelector('.modal-content');
-        modalContent.style.animation = 'modalSlideIn 0.3s ease-out';
-    }
-
-    // Hide modal function
-    function hideModal() {
-        const modalContent = modal.querySelector('.modal-content');
-        modalContent.style.animation = 'modalSlideOut 0.3s ease-in';
-        
-        setTimeout(function() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore body scroll
-        }, 300);
-    }
-});
-
-      
-// Media links data
-     // Media links data
-const mediaLinks = [
-   /* {
-        url: 'https://urbanswaras.co.ke/wp-content/uploads/2019/11/USRC-Newsletter-November-2019.pdf',
-        title: 'USRC Newsletter - November 2019',
-        description: 'Official Urban Swaras Running Club newsletter featuring member highlights and club updates.'
-    },*/
-    {
-        url: 'https://www.businessdailyafrica.com/bd/lifestyle/touring-kenya-through-the-sporting-calendar--2044200',
-        title: 'Touring Kenya Through The Sporting Calendar',
-        description: 'Business Daily Africa feature on Kenya\'s sporting events and running culture.'
-    },
-    {
-        url: 'https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/victor-kamau-s-nine-year-ultra-run-addiction--4514092',
-        title: 'Victor Kamau\'s Nine-Year Ultra Run Addiction',
-        description: 'In-depth profile of Victor Kamau and his journey in ultra-running.'
-    },
-    {
-        url: 'https://www.businessdailyafrica.com/bd/lifestyle/the-running-clubs-taking-over-nairobi-3865094',
-        title: 'The Running Clubs Taking Over Nairobi',
-        description: 'Feature article about the growing running club culture in Nairobi, including Urban Swaras.'
-    },
-    {
-        url: 'https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/urban-swaras-a-running-club-changing-lives--2243486#google_vignette',
-        title: 'Urban Swaras: A Running Club Changing Lives',
-        description: 'Comprehensive coverage of how Urban Swaras is transforming lives through running.'
-    }
-];
-
-// Video links data
-const videoLinks = [
-    {
-        url: 'https://youtu.be/YXBnN7L19iY?si=HbOtrctrwL-4xx09',
-        title: 'Urban Swaras Training Session',
-        description: 'Join us for an exciting training session with the Urban Swaras running community.'
-    },
-    {
-        url: 'https://youtu.be/4-ke31svONg?si=ZLm3ru0fyvCN5-8F',
-        title: 'Marathon Preparation Journey',
-        description: 'Follow our members as they prepare for their marathon challenges.'
-    },
-    {
-        url: 'https://youtu.be/EmHsqz9USio?si=HQSGmSC9ZkXg9EoP',
-        title: 'Community Running Event',
-        description: 'Highlights from our community running event and member experiences.'
-    },
-    {
-        url: 'https://youtu.be/5UVdYSZR3wY?si=fmGtIbwgOosd0_J5',
-        title: 'Runner Success Stories',
-        description: 'Inspiring success stories from Urban Swaras running club members.'
-    }
-];
-
-// Show media links modal
-function showMediaLinks() {
-    const modal = document.getElementById('mediaModal');
-    const linksContainer = document.getElementById('mediaLinks');
-   
-    linksContainer.innerHTML = '';
-   
-    mediaLinks.forEach(link => {
-        const linkElement = document.createElement('a');
-        linkElement.href = link.url;
-        linkElement.target = '_blank';
-        linkElement.className = 'media-link';
-        linkElement.innerHTML = `
-            <div class="link-title"><i class="fas fa-external-link-alt"></i> ${link.title}</div>
-            <div class="link-description">${link.description}</div>
+        // Add CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.6);
+                transform: scale(0);
+                animation: ripple-animation 0.6s linear;
+                pointer-events: none;
+            }
+            
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            .animate-in {
+                animation: fadeInUp 0.8s ease-out forwards;
+            }
+            
+            .loaded {
+                opacity: 1;
+            }
+            
+            /* Additional hover effects */
+            .story-column {
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            
+            .story-column:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+            
+            .story-column:nth-child(2) {
+                animation-delay: 0.3s;
+            }
+            
+            .story-column:nth-child(3) {
+                animation-delay: 0.5s;
+            }
         `;
-        linksContainer.appendChild(linkElement);
-    });
-   
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-// Show video links modal
-function showVideoLinks() {
-    const modal = document.getElementById('videoModal');
-    const linksContainer = document.getElementById('videoLinks');
-   
-    linksContainer.innerHTML = '';
-   
-    videoLinks.forEach(link => {
-        const linkElement = document.createElement('a');
-        linkElement.href = link.url;
-        linkElement.target = '_blank';
-        linkElement.className = 'media-link';
-        linkElement.innerHTML = `
-            <div class="link-title"><i class="fab fa-youtube"></i> ${link.title}</div>
-            <div class="link-description">${link.description}</div>
-        `;
-        linksContainer.appendChild(linkElement);
-    });
-   
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-// Close modal
-function closeModal(modalId) {
-    document.getElementById(modalId).classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-// Close modal when clicking outside
-document.querySelectorAll('.modal-overlay').forEach(modal => {
-    modal.addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeModal(this.id);
-        }
-    });
-});
+        document.head.appendChild(style);     
+ 
         // File upload handling
         const fileInput = document.getElementById('fileInput');
         const fileUploadArea = document.getElementById('fileUploadArea');
