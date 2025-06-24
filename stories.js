@@ -262,16 +262,16 @@ document.addEventListener('DOMContentLoaded', function() {
 // Add slide out animation
 const style = document.createElement('style');
 style.textContent = `
-    @keyframes modalSlideOut {
-        from {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        to {
-            opacity: 0;
-            transform: translateY(-50px);
-        }
+   @keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(-50px);
     }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
 `;
 document.head.appendChild(style);
 
