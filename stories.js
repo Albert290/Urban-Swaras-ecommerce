@@ -197,39 +197,39 @@ const blogLinks = [
 // Modal functionality
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('blogsModal');
-    const readAllBtn = document.querySelector('.view-all-btn');
+    const readAllBtn = document.getElementById('readAllBlogsBtn');
     const closeBtn = document.querySelector('.close-btn');
     const blogItems = document.querySelectorAll('.blog-item');
 
-    // Update the existing button's onclick to show modal instead
+    // Show modal when clicking "Read All Blogs" button
     if (readAllBtn) {
-        readAllBtn.onclick = function(e) {
+        readAllBtn.addEventListener('click', function(e) {
             e.preventDefault();
             showModal();
-        };
+        });
     }
 
     // Close modal when clicking the close button
     if (closeBtn) {
-        closeBtn.onclick = function() {
+        closeBtn.addEventListener('click', function() {
             hideModal();
-        };
+        });
     }
 
     // Close modal when clicking outside of it
-    window.onclick = function(event) {
+    modal.addEventListener('click', function(event) {
         if (event.target === modal) {
             hideModal();
         }
-    };
+    });
 
     // Add click handlers to blog items
     blogItems.forEach(function(item, index) {
-        item.onclick = function() {
+        item.addEventListener('click', function() {
             if (blogLinks[index] && blogLinks[index].url) {
                 window.open(blogLinks[index].url, '_blank');
             }
-        };
+        });
     });
 
     // Handle escape key
@@ -239,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Show modal function
     function showModal() {
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden'; // Prevent body scroll
@@ -248,6 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modalContent.style.animation = 'modalSlideIn 0.3s ease-out';
     }
 
+    // Hide modal function
     function hideModal() {
         const modalContent = modal.querySelector('.modal-content');
         modalContent.style.animation = 'modalSlideOut 0.3s ease-in';
@@ -258,22 +260,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 });
-
-// Add slide out animation
-const style = document.createElement('style');
-style.textContent = `
-   @keyframes modalSlideIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -50%) translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-`;
-document.head.appendChild(style);
 
       
 // Media links data
