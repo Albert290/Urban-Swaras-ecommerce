@@ -136,6 +136,145 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Blog links data
+const blogLinks = [
+    {
+        title: "Touring Kenya Through The Sporting Calendar",
+        description: "Business Daily Africa feature on Kenya's sporting events and running culture.",
+        url: "https://drive.google.com/file/d/1xigsjojfY5yLzirVp9taOWx5hhlManUh/view",
+        icon: "fas fa-external-link-alt"
+    },
+    {
+        title: "USRC Newsletter - November 2019",
+        description: "Latest updates and highlights from Urban Swaras Running Club community.",
+        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/11/USRC-Newsletter-November-2019.pdf",
+        icon: "fas fa-file-pdf"
+    },
+    {
+        title: "USRC Newsletter - August 2019",
+        description: "Monthly newsletter featuring training tips and community stories.",
+        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/08/USRC_Newsletter_August_2019.pdf",
+        icon: "fas fa-file-pdf"
+    },
+    {
+        title: "USRC Newsletter - June 2019",
+        description: "Mid-year highlights and upcoming events from our running community.",
+        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/06/USRC-Newsletter-June-2019.pdf",
+        icon: "fas fa-file-pdf"
+    },
+    {
+        title: "USRC Newsletter - March 2019",
+        description: "Spring edition with race results and training achievements.",
+        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/03/USRC-Newsletter-March-2019.pdf",
+        icon: "fas fa-file-pdf"
+    },
+    {
+        title: "USRC Newsletter - January 2019",
+        description: "New year edition featuring goals and community resolutions.",
+        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/03/USRC-Newsletter-January-2019.pdf",
+        icon: "fas fa-file-pdf"
+    },
+    {
+        title: "USRC Newsletter - December 2018",
+        description: "Year-end wrap-up with achievements and holiday greetings.",
+        url: "https://urbanswaras.co.ke/wp-content/uploads/2019/01/USRC-Newsletter-December-2018.pdf",
+        icon: "fas fa-file-pdf"
+    },
+    {
+        title: "USRC Newsletter - October 2018",
+        description: "Fall edition with seasonal training tips and event highlights.",
+        url: "https://urbanswaras.co.ke/wp-content/uploads/2018/11/USRC-Newsletter-October-2018.pdf",
+        icon: "fas fa-file-pdf"
+    },
+    {
+        title: "USRC Newsletter - August 2018",
+        description: "Summer newsletter featuring community activities and achievements.",
+        url: "https://urbanswaras.co.ke/wp-content/uploads/2018/08/USRC-Newsletter-August-2018.pdf",
+        icon: "fas fa-file-pdf"
+    }
+];
+
+// Modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('blogsModal');
+    const readAllBtn = document.querySelector('.view-all-btn');
+    const closeBtn = document.querySelector('.close-btn');
+    const blogItems = document.querySelectorAll('.blog-item');
+
+    // Update the existing button's onclick to show modal instead
+    if (readAllBtn) {
+        readAllBtn.onclick = function(e) {
+            e.preventDefault();
+            showModal();
+        };
+    }
+
+    // Close modal when clicking the close button
+    if (closeBtn) {
+        closeBtn.onclick = function() {
+            hideModal();
+        };
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            hideModal();
+        }
+    };
+
+    // Add click handlers to blog items
+    blogItems.forEach(function(item, index) {
+        item.onclick = function() {
+            if (blogLinks[index] && blogLinks[index].url) {
+                window.open(blogLinks[index].url, '_blank');
+            }
+        };
+    });
+
+    // Handle escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            hideModal();
+        }
+    });
+
+    function showModal() {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent body scroll
+        
+        // Add animation class
+        const modalContent = modal.querySelector('.modal-content');
+        modalContent.style.animation = 'modalSlideIn 0.3s ease-out';
+    }
+
+    function hideModal() {
+        const modalContent = modal.querySelector('.modal-content');
+        modalContent.style.animation = 'modalSlideOut 0.3s ease-in';
+        
+        setTimeout(function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore body scroll
+        }, 300);
+    }
+});
+
+// Add slide out animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes modalSlideOut {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+    }
+`;
+document.head.appendChild(style);
+
       
 // Media links data
      // Media links data

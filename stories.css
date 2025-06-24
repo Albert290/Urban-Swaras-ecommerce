@@ -592,6 +592,211 @@ header {
         }
 
         /* Stories Grid */
+
+        /* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--white, #FFFFFF);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    background-color: var(--primary, #1F3C5F);
+    color: var(--white, #FFFFFF);
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--accent, #F57C51);
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.close-btn {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--white, #FFFFFF);
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--accent, #F57C51);
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.blog-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: var(--light-bg, #F5F5F5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--secondary, #6BA2D9);
+}
+
+.blog-item:hover {
+    background-color: var(--secondary, #6BA2D9);
+    color: var(--white, #FFFFFF);
+    transform: translateX(-10px);
+    box-shadow: 0 5px 15px rgba(107, 162, 217, 0.3);
+}
+
+.blog-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary, #1F3C5F);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.blog-item:hover .blog-icon {
+    background-color: var(--accent, #F57C51);
+    transform: scale(1.1);
+}
+
+.blog-icon i {
+    color: var(--white, #FFFFFF);
+    font-size: 16px;
+}
+
+.blog-content {
+    flex: 1;
+}
+
+.blog-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary, #1F3C5F);
+    transition: color 0.3s ease;
+}
+
+.blog-item:hover .blog-content h3 {
+    color: var(--white, #FFFFFF);
+}
+
+.blog-content p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text, #333333);
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.blog-item:hover .blog-content p {
+    color: var(--white, #FFFFFF);
+    opacity: 0.9;
+}
+
+/* Scrollbar Styling */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: var(--light-bg, #F5F5F5);
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--secondary, #6BA2D9);
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--primary, #1F3C5F);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .modal-header {
+        padding: 15px 20px;
+    }
+    
+    .modal-header h2 {
+        font-size: 20px;
+    }
+    
+    .blog-item {
+        padding: 12px 15px;
+    }
+    
+    .blog-content h3 {
+        font-size: 15px;
+    }
+    
+    .blog-content p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-item:hover {
+        transform: translateX(-5px);
+    }
+    
+    .blog-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 12px;
+    }
+    
+    .blog-icon i {
+        font-size: 14px;
+    }
+}
         .stories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
