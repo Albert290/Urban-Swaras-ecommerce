@@ -1107,16 +1107,7 @@ body {
     color: #9ca3af;
     opacity: 1;
 }
-
-.form-input:focus {
-    border-color: var(--secondary);
-    box-shadow: 0 0 0 3px rgba(107, 162, 217, 0.1);
-    background: var(--white);
-}
-
-.form-input:hover:not(:focus) {
-    border-color: var(--secondary);
-}
+ 
 
 /* Error State */
 .form-input.error {
