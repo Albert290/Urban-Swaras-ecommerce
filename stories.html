@@ -186,17 +186,7 @@
             --white: #FFFFFF;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-        }
+      
 
         .hero-section {
             position: relative;
@@ -562,8 +552,7 @@
             }
         }
     </style>
-</head>
-<body>
+ 
     <section class="hero-section">
         <div class="hero-background"></div>
         <div class="hero-overlay"></div>
@@ -697,13 +686,13 @@
     </script>
 
      
-   <section class="stories-section">
-        <div class="container">
+    <div class="container">
+        <section class="stories-section">
             <div class="section-header">
                 <h1 class="section-title">Our Stories</h1>
                 <p class="section-subtitle">Discover the inspiring journeys, media coverage, and video content that showcase the Urban Swaras running community and our impact on runners' lives.</p>
             </div>
-            
+
             <div class="stories-grid">
                 <!-- Blogs Column -->
                 <div class="story-column blogs-column">
@@ -712,24 +701,28 @@
                         <h2 class="column-title">Blogs</h2>
                         <p class="column-description">Read inspiring stories, training tips, and experiences shared by our running community members and coaches.</p>
                     </div>
-                    
+
                     <div class="column-content">
                         <div class="content-preview">
-                            <div class="preview-item">
-                                <i class="fas fa-running preview-icon"></i>
-                                <span class="preview-text">Training Tips & Techniques</span>
-                            </div>
-                            <div class="preview-item">
+                            <!-- Updated Blog Links -->
+                            <div class="preview-item" onclick="window.location.href='blog.html#personal-running-journeys'">
                                 <i class="fas fa-heart preview-icon"></i>
                                 <span class="preview-text">Personal Running Journeys</span>
-                            </div> 
+                                <span class="preview-date">(Feb 10, 2024)</span>
+                            </div>
+                            <div class="preview-item" onclick="window.location.href='blog.html#club-newsletters'">
+                                <i class="fas fa-envelope-open-text preview-icon"></i>
+                                <span class="preview-text">Club Newsletters</span>
+                                <span class="preview-date">(Jan 28, 2024)</span>
+                            </div>
+                            <div class="preview-item" onclick="window.location.href='blog.html#training-tips'">
+                                <i class="fas fa-running preview-icon"></i>
+                                <span class="preview-text">Training Tips & Techniques</span>
+                                <span class="preview-date">(Dec 05, 2023)</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <button class="view-all-btn" id="readAllBlogsBtn">
-                        <i class="fas fa-external-link-alt"></i>
-                        Read All Blogs
-                    </button>
+                    <!-- Removed: <button class="view-all-btn" id="readAllBlogsBtn"> -->
                 </div>
 
                 <!-- Media Stories Column -->
@@ -739,24 +732,28 @@
                         <h2 class="column-title">Media Stories</h2>
                         <p class="column-description">Check out how Urban Swaras has been featured in various media outlets and publications.</p>
                     </div>
-                   
+
                     <div class="column-content">
-                        <div class="content-preview"> 
-                            <div class="preview-item">
-                                <i class="fas fa-newspaper preview-icon"></i>
-                                <span class="preview-text">Business Daily Articles</span>
+                        <div class="content-preview">
+                            <!-- Updated Media Links -->
+                            <div class="preview-item" onclick="window.location.href='media.html#club-newsletters'">
+                                <i class="fas fa-file-alt preview-icon"></i>
+                                <span class="preview-text">Newspaper Articles</span>
+                                <span class="preview-date">(Mar 01, 2024)</span>
                             </div>
-                            <div class="preview-item">
-                                <i class="fas fa-microphone preview-icon"></i>
-                                <span class="preview-text">Press Coverage</span>
-                            </div> 
+                            <div class="preview-item" onclick="window.location.href='media.html#club-newsletterss'">
+                                <i class="fas fa-microphone-alt preview-icon"></i>
+                                <span class="preview-text">Radio & TV News</span>
+                                <span class="preview-date">(Feb 15, 2024)</span>
+                            </div>
+                            <div class="preview-item" onclick="window.location.href='media.html#club-newslettersss'">
+                                <i class="fas fa-scroll preview-icon"></i>
+                                <span class="preview-text">Our Press Statement</span>
+                                <span class="preview-date">(Jan 05, 2024)</span>
+                            </div>
                         </div>
                     </div>
-
-                    <button class="view-all-btn" id="viewMediaBtn">
-                        <i class="fas fa-eye"></i>
-                        View Media Coverage
-                    </button>
+                    <!-- Removed: <button class="view-all-btn" id="viewMediaBtn"> -->
                 </div>
 
                 <!-- Video Stories Column -->
@@ -766,184 +763,79 @@
                         <h2 class="column-title">Video Stories</h2>
                         <p class="column-description">Watch our running adventures, training sessions, and member testimonials captured on video.</p>
                     </div>
-                   
+
                     <div class="column-content">
-                        <div class="content-preview">  
-                            <div class="preview-item">
-                                <i class="fas fa-comments preview-icon"></i>
-                                <span class="preview-text">Member Testimonials</span>
+                        <div class="content-preview">
+                            <!-- Updated Video Links -->
+                            <div class="preview-item" onclick="window.location.href='video.html#youtube-videos'">
+                                <i class="fab fa-youtube preview-icon"></i>
+                                <span class="preview-text">YouTube Videos</span>
+                                <span class="preview-date">(Apr 20, 2024)</span>
                             </div>
-                            <div class="preview-item">
-                                <i class="fas fa-calendar-check preview-icon"></i>
-                                <span class="preview-text">Event Highlights</span>
+                            <div class="preview-item" onclick="window.location.href='video.html#tiktok-videos'">
+                                <i class="fab fa-tiktok preview-icon"></i>
+                                <span class="preview-text">TikTok Videos</span>
+                                <span class="preview-date">(Apr 10, 2024)</span>
+                            </div>
+                            <div class="preview-item" onclick="window.location.href='video.html#instagram-videos'">
+                                <i class="fab fa-instagram preview-icon"></i>
+                                <span class="preview-text">Instagram Videos</span>
+                                <span class="preview-date">(Mar 25, 2024)</span>
                             </div>
                         </div>
                     </div>
-
-                    <button class="view-all-btn" id="watchVideosBtn">
-                        <i class="fas fa-youtube"></i>
-                        Watch Videos
-                    </button>
+                    <!-- Removed: <button class="view-all-btn" id="watchVideosBtn"> -->
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Blogs Modal -->
-    <div id="blogsModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Blog Stories</h2>
-                <span class="close-btn" data-modal="blogsModal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="blog-item" onclick="window.open('https://urbanswaras.co.ke/wp-content/uploads/2019/11/USRC-Newsletter-November-2019.pdf', '_blank')">
-                    <div class="blog-icon">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Marathon Training Guide for Beginners</h3>
-                        <p>A comprehensive guide to help new runners prepare for their first marathon with Urban Swaras.</p>
-                    </div>
-                </div>
-                
-                <div class="blog-item" onclick="window.open('https://drive.google.com/file/d/1xigsjojfY5yLzirVp9taOWx5hhlManUh/view', '_blank')">
-                    <div class="blog-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="blog-content">
-                        <h3>From Couch to 5K: Sarah's Journey</h3>
-                        <p>Follow Sarah's inspiring transformation from a sedentary lifestyle to completing her first 5K race.</p>
-                    </div>
-                </div>
-                
-                <div class="blog-item" onclick="window.open('https://urbanswaras.co.ke/wp-content/uploads/2019/08/USRC_Newsletter_August_2019.pdf', '_blank')">
-                    <div class="blog-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Urban Swaras 10th Anniversary</h3>
-                        <p>Recap of our club's history.</p>
-                    </div>
-                </div>
-                
-                <div class="blog-item" onclick="window.open('https://urbanswaras.co.ke/wp-content/uploads/2019/06/USRC-Newsletter-June-2019.pdf', '_blank')">
-                    <div class="blog-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Avani : A six star journey</h3>
-                        <p>A story of my running journey.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
 
-    <!-- Media Modal -->
-    <div id="mediaModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Media Coverage</h2>
-                <span class="close-btn" data-modal="mediaModal">&times;</span>
-            </div>
-            <div class="modal-body"> 
-                
-                <div class="media-item" onclick="window.open('https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/urban-swaras-a-running-club-changing-lives--2243486#google_vignette', '_blank')">
-                    <div class="media-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <div class="media-content">
-                        <h3>Business Daily Africa</h3>
-                        <p>Urban Swaras: A running club changing lives
-.</p>
-                    </div>
-                </div>
-                
-                <div class="media-item" onclick="window.open('https://www.businessdailyafrica.com/bd/lifestyle/meet-the-marathoner-behind-viceroy-success--2071684', '_blank')">
-                    <div class="media-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <div class="media-content">
-                        <h3>Business Daily Africa</h3>
-                        <p>The running clubs taking over Nairobi.</p>
-                    </div>
-                </div>
-                
-                <div class="media-item" onclick="window.open('https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/victor-kamau-s-nine-year-ultra-run-addiction--4514092', '_blank')">
-                    <div class="media-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <div class="media-content">
-                        <h3>Business Daily Africa</h3>
-                        <p>Victor Kamau's nine-year ultra run addiction.</p>
-                    </div>
-                </div>
-                
-                <div class="media-item" onclick="window.open('https://www.businessdailyafrica.com/bd/lifestyle/meet-the-marathoner-behind-viceroy-success--2071684', '_blank')">
-                    <div class="media-icon">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <div class="media-content">
-                        <h3>Daily Nation Feature Story</h3>
-                        <p>Meet the marathoner behind Viceroy success.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script>
+        // Class for handling scroll animations
+        class ScrollAnimations {
+            constructor() {
+                this.initializeIntersectionObserver();
+            }
 
-    <!-- Videos Modal -->
-    <div id="videosModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Video Stories</h2>
-                <span class="close-btn" data-modal="videosModal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="video-item" onclick="window.open('https://youtube.com', '_blank')">
-                    <div class="video-icon">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div class="video-content">
-                        <h3>Weekly Training Session Highlights</h3>
-                        <p>Join our weekly training sessions and see how we build endurance together.</p>
-                    </div>
-                </div>
-                
-                <div class="video-item" onclick="window.open('https://youtube.com', '_blank')">
-                    <div class="video-icon">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="video-content">
-                        <h3>Trail Running Adventures in Ngong Hills</h3>
-                        <p>Experience the breathtaking trail runs through Kenya's beautiful landscapes.</p>
-                    </div>
-                </div>
-                
-                <div class="video-item" onclick="window.open('https://youtube.com', '_blank')">
-                    <div class="video-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <div class="video-content">
-                        <h3>Member Success Stories</h3>
-                        <p>Hear directly from our members about their running transformations.</p>
-                    </div>
-                </div>
-                
-                <div class="video-item" onclick="window.open('https://youtube.com', '_blank')">
-                    <div class="video-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <div class="video-content">
-                        <h3>Nairobi Marathon 2023 Highlights</h3>
-                        <p>Relive the excitement of our team's participation in the Nairobi Marathon.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            /**
+             * Initializes an Intersection Observer to animate elements as they come into view.
+             */
+            initializeIntersectionObserver() {
+                const options = {
+                    // Trigger when 10% of the element is visible
+                    threshold: 0.1,
+                    // Margin around the viewport, causing observer to trigger earlier/later
+                    rootMargin: '0px 0px -50px 0px'
+                };
 
+                // Create a new Intersection Observer
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        // If the element is intersecting (visible)
+                        if (entry.isIntersecting) {
+                            // Add 'animate-in' class to trigger CSS animation
+                            entry.target.classList.add('animate-in');
+                            // Stop observing the element once it has animated
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, options);
+
+                // Observe all story columns
+                const storyColumns = document.querySelectorAll('.story-column');
+                storyColumns.forEach((column, index) => {
+                    // Add a staggered animation delay based on element index
+                    column.style.transitionDelay = `${index * 0.2}s`; // Add delay for individual column animation
+                    observer.observe(column); // Start observing the column
+                });
+            }
+        }
+
+        // Initialize scroll animations when the DOM content is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new ScrollAnimations();
+        });
+    </script>
 
     <section class="upload-section">
         <div class="container">
