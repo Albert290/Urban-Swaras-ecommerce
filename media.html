@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Swaras</title>
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        
+</head>
+ 
+   <!-- Top Bar -->
+<div class="top-bar">
+    <div class="next-event">
+        <span>Next event:</span>Run Event: Old Moses Run: Nanyuki, Saturday, June 28, 2025
+    </div>
+    <div class="contact-social">
+        <div class="phone">
+            <i class="fas fa-phone"></i> +254740894117
+        </div>
+        <div class="social-icons">
+            <a href="https://www.strava.com/clubs/244473" title="Strava" class="strava-icon">
+                <i class="fab fa-strava"></i>
+            </a>
+            <a href="https://connect.garmin.com/modern/group/18200" title="Garmin" class="garmin-icon">
+                <i class="fas fa-running"></i>
+            </a>
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/urbanswaras" title="Facebook" class="facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <a href="calendar.html#redirect" class="register-btn">
+             <span class="btn-text-full">Click here to register</span>
+              <span class="btn-text-short">Register</span>
+        </a>
+    </div>
+</div>
+    
+   <!-- Main Header -->
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
+        </div>
+        
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link">
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="stories.html" class="nav-link">
+                        <span>Our Stories</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="members.html" class="nav-link">
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="regulation.html" class="nav-link">
+                        <span>Governance</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.urbanswaras.co.ke/" class="nav-link" target="_blank" rel="noopener noreferrer">
+                    <span>Duka La Swara</span>
+                  </a>
+                </li> 
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="data.html" class="nav-link">
+                        <span>Downloads</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions"> 
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="closeMenu">
+                <span>&times;</span>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul class="mobile-links">
+                <li class="mobile-item active">
+                    <a href="index.html" class="mobile-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="calendar.html" class="mobile-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                  <a href="stories.html" class="mobile-link">
+                     <i class="fas fa-book-open"></i>
+                     <span>Our Stories</span>
+                  </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="members.html" class="mobile-link">
+                        <i class="fas fa-users"></i>
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="regulation.html" class="mobile-link">
+                        <i class="fas fa-gavel"></i>
+                        <span>Governance</span>
+                    </a>
+                </li> 
+                <li class="mobile-item">
+                    <a href="https://www.urbanswaras.co.ke/" class="mobile-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Duka La Swara</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="contact.html" class="mobile-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="data.html" class="mobile-link">
+                        <i class="fas fa-download"></i>
+                        <span>Downloads</span>
+                    </a>
+                </li> 
+            </ul>
+            
+            <!-- <div class="mobile-cta">  
+                <button class="mobile-cta-button">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Become a Member</span>
+                </button>
+            </div>-->
+        </nav>
+    </div>
+</header>
+
+ 
+      
+</head>
+<body>
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-broadcast-tower"></i> Media Coverage</h1>
+            <p>USRC in the spotlight - Press coverage and media mentions</p>
+        </header>
+
+        
+
+        <!-- Newspaper Articles Section -->
+        <section class="media-section" id="club-newsletters">
+            <div class="section-header newspaper">
+                <h2>
+                    <i class="fas fa-newspaper"></i>
+                    Newspaper Articles
+                </h2>
+                <div class="coverage-count">Featured in Business Daily Africa</div>
+            </div>
+            <div class="section-content">
+                <div class="media-grid">
+                    <div class="media-card">
+                        <div class="media-card-content">
+                            <div class="publication-badge">Business Daily</div>
+                            <div class="media-title">
+                                <i class="fas fa-heart"></i>
+                                Urban Swaras: A Running Club Changing Lives
+                            </div>
+                            <div class="media-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Published: March 2020
+                            </div>
+                            <div class="media-excerpt">
+                                Discover how Urban Swaras Running Club has transformed from a small group of running enthusiasts into a community-driven organization that's making a real difference in people's lives through the power of running.
+                            </div>
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/urban-swaras-a-running-club-changing-lives--2243486#google_vignette" class="media-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Full Article
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-card-content">
+                            <div class="publication-badge">Business Daily</div>
+                            <div class="media-title">
+                                <i class="fas fa-city"></i>
+                                The Running Clubs Taking Over Nairobi
+                            </div>
+                            <div class="media-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Published: September 2022
+                            </div>
+                            <div class="media-excerpt">
+                                An in-depth look at how running clubs like Urban Swaras are revolutionizing the fitness scene in Nairobi, creating communities and fostering healthy lifestyles across the city.
+                            </div>
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/the-running-clubs-taking-over-nairobi-3865094" class="media-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Full Article
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-card-content">
+                            <div class="publication-badge">Business Daily</div>
+                            <div class="media-title">
+                                <i class="fas fa-trophy"></i>
+                                Meet the Marathoner Behind Viceroy Success
+                            </div>
+                            <div class="media-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Published: November 2019
+                            </div>
+                            <div class="media-excerpt">
+                                A profile piece featuring one of our accomplished members, showcasing the dedication and training that goes into marathon success and the role of community support.
+                            </div>
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/meet-the-marathoner-behind-viceroy-success--2071684" class="media-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Full Article
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-card-content">
+                            <div class="publication-badge">Business Daily</div>
+                            <div class="media-title">
+                                <i class="fas fa-mountain"></i>
+                                Victor Kamau's Nine-Year Ultra Run Addiction
+                            </div>
+                            <div class="media-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Published: January 2024
+                            </div>
+                            <div class="media-excerpt">
+                                The inspiring story of Victor Kamau's journey into ultra-running over nine years, highlighting the mental and physical challenges of long-distance running and the support system that keeps him going.
+                            </div>
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/health-fitness/victor-kamau-s-nine-year-ultra-run-addiction--4514092" class="media-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Full Article
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-card-content">
+                            <div class="publication-badge">Business Daily</div>
+                            <div class="media-title">
+                                <i class="fas fa-flag-checkered"></i>
+                                Touring Kenya Through the Sporting Calendar
+                            </div>
+                            <div class="media-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Published: October 2019
+                            </div>
+                            <div class="media-excerpt">
+                                Explore Kenya's rich sporting heritage and how running clubs like Urban Swaras contribute to the country's athletic culture, featuring various sporting events and destinations across the nation.
+                            </div>
+                            <a href="https://www.businessdailyafrica.com/bd/lifestyle/touring-kenya-through-the-sporting-calendar--2044200" class="media-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Full Article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Radio & TV News Section -->
+        <section class="media-section" id="club-newsletterss">
+            <div class="section-header radio-tv">
+                <h2>
+                    <i class="fas fa-broadcast-tower"></i>
+                    Radio & TV News
+                </h2>
+                <div class="coverage-count">Broadcast Media Coverage</div>
+            </div>
+            <div class="section-content">
+                <div class="placeholder-section">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h3>Coming Soon</h3>
+                    <p>Our radio and television appearances will be featured here. Stay tuned for interviews, news segments, and special features highlighting our club's activities and achievements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Press Statements Section -->
+        <section class="media-section" id="club-newslettersss">
+            <div class="section-header press">
+                <h2>
+                    <i class="fas fa-file-alt"></i>
+                    Press Statements
+                </h2>
+                <div class="coverage-count">Official Club Communications</div>
+            </div>
+            <div class="section-content">
+                <div class="placeholder-section">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Official Communications</h3>
+                    <p>Our official press releases and statements will be published here, including announcements about events, partnerships, achievements, and important club updates.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+ 
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Urban Swaras</h3>
+            <p class="footer-about">Nairobi's premier running community since 2006. Promoting recreational running and building friendships through shared miles.</p>
+        
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links"> 
+                <li><a href="calendar.html">Events</a></li>
+                <li><a href="stories.html">Our Stories</a></li>
+                <li><a href="members.html">Membership</a></li>
+                <li><a href="regulation.html">Governance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.urbanswaras.co.ke/">Duka La Swara</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+<div class="footer-column">
+    
+    <h3 class="footer-heading">Contact Us</h3>
+    <ul class="footer-contact">
+        <li><i class="fas fa-phone-alt"></i> +254740894117</li>
+        <li><i class="fas fa-envelope"></i> info@urbanswaras.co.ke</li>
+    </ul>
+    <div class="footer-social">
+        <a href="https://www.facebook.com/urbanswaras" aria-label="Facebook" class="facebook-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a><div class="contact-social">
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a></div>
+        <a href="https://www.strava.com/clubs/244473" aria-label="Strava" class="strava-icon">
+            <i class="fab fa-strava"></i>
+        </a>
+        <a href="https://connect.garmin.com/modern/group/18200" aria-label="Garmin" class="garmin-icon">
+            <i class="fas fa-running"></i>
+        </a>
+    </div>
+</div>
+
+        <!-- Column 4: Newsletter -->
+       <div class="footer-column">
+         <h3 class="footer-heading">Stay Updated</h3>
+         <form class="newsletter-form" action="https://formspree.io/f/mkgbvjey" method="POST">
+             <input type="email" name="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+         </form>
+              <p class="footer-notes">Get notified about upcoming runs and events.</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Urban Swaras Running Club. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="data.html">Privacy Policy</a>
+            <a href="regulation.html">Terms of Use</a>
+        </div>
+    </div>
+</footer>
+<script src="media.js"></script>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Swaras</title>
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        
+</head>
+ 
+   <!-- Top Bar -->
+<div class="top-bar">
+    <div class="next-event">
+        <span>Next event:</span>Run Event: Old Moses Run: Nanyuki, Saturday, June 28, 2025
+    </div>
+    <div class="contact-social">
+        <div class="phone">
+            <i class="fas fa-phone"></i> +254740894117
+        </div>
+        <div class="social-icons">
+            <a href="https://www.strava.com/clubs/244473" title="Strava" class="strava-icon">
+                <i class="fab fa-strava"></i>
+            </a>
+            <a href="https://connect.garmin.com/modern/group/18200" title="Garmin" class="garmin-icon">
+                <i class="fas fa-running"></i>
+            </a>
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/urbanswaras" title="Facebook" class="facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <a href="calendar.html#redirect" class="register-btn">
+             <span class="btn-text-full">Click here to register</span>
+              <span class="btn-text-short">Register</span>
+        </a>
+    </div>
+</div>
+    
+   <!-- Main Header -->
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
+        </div>
+        
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link">
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="stories.html" class="nav-link">
+                        <span>Our Stories</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="members.html" class="nav-link">
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="regulation.html" class="nav-link">
+                        <span>Governance</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.urbanswaras.co.ke/" class="nav-link" target="_blank" rel="noopener noreferrer">
+                    <span>Duka La Swara</span>
+                  </a>
+                </li> 
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="data.html" class="nav-link">
+                        <span>Downloads</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions"> 
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="closeMenu">
+                <span>&times;</span>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul class="mobile-links">
+                <li class="mobile-item active">
+                    <a href="index.html" class="mobile-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="calendar.html" class="mobile-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                  <a href="stories.html" class="mobile-link">
+                     <i class="fas fa-book-open"></i>
+                     <span>Our Stories</span>
+                  </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="members.html" class="mobile-link">
+                        <i class="fas fa-users"></i>
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="regulation.html" class="mobile-link">
+                        <i class="fas fa-gavel"></i>
+                        <span>Governance</span>
+                    </a>
+                </li> 
+                <li class="mobile-item">
+                    <a href="https://www.urbanswaras.co.ke/" class="mobile-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Duka La Swara</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="contact.html" class="mobile-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="mobile-item">
+                    <a href="data.html" class="mobile-link">
+                        <i class="fas fa-download"></i>
+                        <span>Downloads</span>
+                    </a>
+                </li> 
+            </ul>
+            
+            <!-- <div class="mobile-cta">  
+                <button class="mobile-cta-button">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Become a Member</span>
+                </button>
+            </div>-->
+        </nav>
+    </div>
+</header>
+
+ 
+</head>
+<body>
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <div class="video-overlay" id="videoOverlay">
+        <div class="close-overlay" onclick="closeVideo()">
+            <i class="fas fa-times"></i>
+        </div>
+        <iframe id="videoFrame" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-video"></i> Video Gallery</h1>
+            <p>Watch our running adventures, training sessions, and community highlights</p>
+        </header>
+
+        
+
+        <!-- YouTube Videos Section -->
+        <section class="video-section" id="youtube-videos">
+            <div class="section-header youtube">
+                <h2>
+                    <i class="fab fa-youtube"></i>
+                    YouTube Videos
+                </h2>
+                <div class="video-count">Educational & Training Content</div>
+            </div>
+            <div class="section-content">
+                <div class="video-grid">
+                    <div class="video-card youtube">
+                        <div class="video-thumbnail">
+                            <div class="play-button" onclick="playVideo('https://youtube.com/embed/training-highlights')">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge youtube">YouTube</div>
+                            <div class="video-title">Training Highlights</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Published: March 2024
+                            </div>
+                            <div class="video-description">
+                                Watch our intensive training sessions featuring various running techniques, strength training, and conditioning exercises that help our members improve their performance and endurance.
+                            </div>
+                            <a href="https://youtube.com/watch?v=training-highlights" class="video-link youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                                Watch on YouTube
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="video-card youtube">
+                        <div class="video-thumbnail">
+                            <div class="play-button" onclick="playVideo('https://youtube.com/embed/ngong-hills-trail')">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge youtube">YouTube</div>
+                            <div class="video-title">Ngong Hills Trail Adventure</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Published: February 2024
+                            </div>
+                            <div class="video-description">
+                                Join us on an epic trail running adventure through the scenic Ngong Hills. Experience the challenging terrain, breathtaking views, and the camaraderie of trail running with USRC.
+                            </div>
+                            <a href="https://youtube.com/watch?v=ngong-hills-trail" class="video-link youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                                Watch on YouTube
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="video-card youtube">
+                        <div class="video-thumbnail">
+                            <div class="play-button" onclick="playVideo('https://youtube.com/embed/member-testimonials')">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge youtube">YouTube</div>
+                            <div class="video-title">Member Testimonials</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Published: January 2024
+                            </div>
+                            <div class="video-description">
+                                Hear inspiring stories from our club members about their running journeys, personal achievements, and how USRC has transformed their lives and fitness goals.
+                            </div>
+                            <a href="https://youtube.com/watch?v=member-testimonials" class="video-link youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                                Watch on YouTube
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="video-card youtube">
+                        <div class="video-thumbnail">
+                            <div class="play-button" onclick="playVideo('https://youtube.com/embed/nairobi-marathon-2023')">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge youtube">YouTube</div>
+                            <div class="video-title">Nairobi Marathon 2023</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Published: October 2023
+                            </div>
+                            <div class="video-description">
+                                Relive the excitement of the Nairobi Marathon 2023 with our club members. From the starting line to the finish, witness the determination and spirit of our runners.
+                            </div>
+                            <a href="https://youtube.com/watch?v=nairobi-marathon-2023" class="video-link youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                                Watch on YouTube
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Videos Section -->
+        <section class="video-section" id="instagram-videos">
+            <div class="section-header instagram">
+                <h2>
+                    <i class="fab fa-instagram"></i>
+                    Instagram Reels
+                </h2>
+                <div class="video-count">Quick Highlights & Moments</div>
+            </div>
+            <div class="section-content">
+                <div class="video-grid">
+                    <div class="video-card instagram">
+                        <div class="video-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge instagram">Instagram</div>
+                            <div class="video-title">Running Motivation Monday</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Posted: March 2024
+                            </div>
+                            <div class="video-description">
+                                Start your week with motivation! Watch our members share their weekly running goals and tips for staying consistent with your training routine.
+                            </div>
+                            <a href="https://www.instagram.com/reel/DHVaNqzomPc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="video-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                View on Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="video-card instagram">
+                        <div class="video-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge instagram">Instagram</div>
+                            <div class="video-title">Weekend Trail Run</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Posted: February 2024
+                            </div>
+                            <div class="video-description">
+                                Join us for our weekend trail adventures! Beautiful scenery, challenging paths, and great company make for the perfect weekend activity.
+                            </div>
+                            <a href="https://www.instagram.com/reel/DLPm9ccIGj2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="video-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                View on Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="video-card instagram">
+                        <div class="video-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge instagram">Instagram</div>
+                            <div class="video-title">Running Form Tips</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Posted: January 2024
+                            </div>
+                            <div class="video-description">
+                                Improve your running efficiency with these quick form tips from our experienced coaches. Small adjustments can make a big difference!
+                            </div>
+                            <a href="https://www.instagram.com/reel/DAZNDzAI_Zx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="video-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                View on Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="video-card instagram">
+                        <div class="video-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge instagram">Instagram</div>
+                            <div class="video-title">Pre-Race Preparation</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Posted: December 2023
+                            </div>
+                            <div class="video-description">
+                                Getting ready for race day! Watch our members prepare mentally and physically for their upcoming marathon challenge.
+                            </div>
+                            <a href="https://www.instagram.com/reel/C_dQsERIGcE/?utm_source=ig_web_copy_link" class="video-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                View on Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="video-card instagram">
+                        <div class="video-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge instagram">Instagram</div>
+                            <div class="video-title">Group Training Session</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Posted: November 2023
+                            </div>
+                            <div class="video-description">
+                                Experience the energy of our group training sessions! Nothing beats the motivation of running with fellow enthusiasts who share your passion.
+                            </div>
+                            <a href="https://www.instagram.com/reel/C9pF4_rIxcQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="video-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                View on Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="video-card instagram">
+                        <div class="video-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge instagram">Instagram</div>
+                            <div class="video-title">Recovery & Stretching</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Posted: October 2023
+                            </div>
+                            <div class="video-description">
+                                Don't skip the cool down! Learn essential post-run stretches and recovery techniques to prevent injury and improve performance.
+                            </div>
+                            <a href="https://www.instagram.com/reel/C9Xt5jyIFBR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="video-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                View on Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="video-card instagram">
+                        <div class="video-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-card-content">
+                            <div class="platform-badge instagram">Instagram</div>
+                            <div class="video-title">Early Morning Runners</div>
+                            <div class="video-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                Posted: September 2022
+                            </div>
+                            <div class="video-description">
+                                Rise and grind! Join our early morning running crew as they tackle the quiet streets of Nairobi before the city wakes up.
+                            </div>
+                            <a href="https://www.instagram.com/reel/Ce8r4uhIIUK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="video-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                View on Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TikTok Videos Section -->
+        <section class="video-section" id="tiktok-videos">
+            <div class="section-header tiktok">
+                <h2>
+                    <i class="fab fa-tiktok"></i>
+                    TikTok Videos
+                </h2>
+                <div class="video-count">Fun & Viral Content</div>
+            </div>
+            <div class="section-content">
+                <div class="placeholder-section">
+                    <i class="fab fa-tiktok"></i>
+                    <h3>Coming Soon to TikTok</h3>
+                    <p>We're planning to create engaging short-form videos showcasing running tips, challenges, and behind-the-scenes moments. Follow us for updates on our TikTok launch!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+ 
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Urban Swaras</h3>
+            <p class="footer-about">Nairobi's premier running community since 2006. Promoting recreational running and building friendships through shared miles.</p>
+        
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links"> 
+                <li><a href="calendar.html">Events</a></li>
+                <li><a href="stories.html">Our Stories</a></li>
+                <li><a href="members.html">Membership</a></li>
+                <li><a href="regulation.html">Governance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.urbanswaras.co.ke/">Duka La Swara</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+<div class="footer-column">
+    
+    <h3 class="footer-heading">Contact Us</h3>
+    <ul class="footer-contact">
+        <li><i class="fas fa-phone-alt"></i> +254740894117</li>
+        <li><i class="fas fa-envelope"></i> info@urbanswaras.co.ke</li>
+    </ul>
+    <div class="footer-social">
+        <a href="https://www.facebook.com/urbanswaras" aria-label="Facebook" class="facebook-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a><div class="contact-social">
+            <a href="https://www.instagram.com/urbanswarasrunningclub/" title="Instagram" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a></div>
+        <a href="https://www.strava.com/clubs/244473" aria-label="Strava" class="strava-icon">
+            <i class="fab fa-strava"></i>
+        </a>
+        <a href="https://connect.garmin.com/modern/group/18200" aria-label="Garmin" class="garmin-icon">
+            <i class="fas fa-running"></i>
+        </a>
+    </div>
+</div>
+
+        <!-- Column 4: Newsletter -->
+       <div class="footer-column">
+         <h3 class="footer-heading">Stay Updated</h3>
+         <form class="newsletter-form" action="https://formspree.io/f/mkgbvjey" method="POST">
+             <input type="email" name="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+         </form>
+              <p class="footer-notes">Get notified about upcoming runs and events.</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Urban Swaras Running Club. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="data.html">Privacy Policy</a>
+            <a href="regulation.html">Terms of Use</a>
+        </div>
+    </div>
+</footer>
+<script src="video.js"></script>
+</body>
+</html>
