@@ -271,3 +271,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         });
+
+        // Add this script to data.html
+window.addEventListener('DOMContentLoaded', function() {
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const viewParam = urlParams.get('view');
+    
+    // If the 'view' parameter is 'privacy', automatically trigger the button click
+    if (viewParam === 'privacy') {
+        // Small delay to ensure the page is fully loaded
+        setTimeout(function() {
+            toggleDocument('privacy');
+        }, 100);
+    }
+});
+
+// Add this script to regulation.html
+window.addEventListener('DOMContentLoaded', function() {
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const downloadParam = urlParams.get('download');
+    
+    // If the 'download' parameter is 'rules', automatically trigger the download
+    if (downloadParam === 'rules') {
+        // Small delay to ensure the page is fully loaded
+        setTimeout(function() {
+            downloadDocument('rules');
+        }, 100);
+    }
+});
