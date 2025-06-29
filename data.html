@@ -35,18 +35,18 @@
         </div>
         <a href="calendar.html#redirect" class="register-btn">
              <span class="btn-text-full">Click here to register</span>
-              <span class="btn-text-short">Register</span>
+              <span class="btn-text-short">Register Next Event</span>
         </a>
     </div>
 </div>
-    
-    
-   <!-- Main Header -->
+     <!-- Main Header -->
 <header class="main-header">
     <div class="header-container">
         <div class="logo-section">
-            <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
-        </div>
+    <a href="index.html" style="text-decoration: none;">
+        <img src="images/newest logo.jpg" alt="Urban Swaras Logo" class="logo">
+    </a>
+</div>
         
         <nav class="desktop-nav">
             <ul class="nav-links">
@@ -87,7 +87,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="data.html" class="nav-link">
-                        <span>Downloads</span>
+                        <span>Resources</span>
                     </a>
                 </li>
             </ul>
@@ -161,7 +161,7 @@
                 <li class="mobile-item">
                     <a href="data.html" class="mobile-link">
                         <i class="fas fa-download"></i>
-                        <span>Downloads</span>
+                        <span>Resources</span>
                     </a>
                 </li> 
             </ul>
@@ -175,7 +175,6 @@
         </nav>
     </div>
 </header>
-
     <!-- Main Content -->
     <div class="container">
         <!-- Downloads Section -->
@@ -208,7 +207,10 @@
                         <p class="card-description">Official governing document of Urban Swaras Running Club</p>
                     </div>
                     <div class="card-actions">
-                        <button class="action-btn download-btn" onclick="downloadDocument('constitution')">
+                        <button class="action-btn view-btn" onclick="showMembershipConfirm('constitution')">
+                            <i class="fas fa-eye"></i> View Document
+                        </button>
+                        <button class="action-btn download-btn" onclick="showMembershipConfirm('constitution')">
                             <i class="fas fa-download"></i> Download PDF
                         </button>
                     </div>
@@ -222,7 +224,10 @@
                         <p class="card-description">Guidelines and policies for all club members</p>
                     </div>
                     <div class="card-actions">
-                        <button class="action-btn download-btn" onclick="downloadDocument('rules')">
+                        <button class="action-btn view-btn" onclick="showMembershipConfirm('rules')">
+                            <i class="fas fa-eye"></i> View Document
+                        </button>
+                        <button class="action-btn download-btn" onclick="showMembershipConfirm('rules')">
                             <i class="fas fa-download"></i> Download PDF
                         </button>
                     </div>
@@ -236,8 +241,8 @@
                         <p class="card-description">Registration form for new club members</p>
                     </div>
                     <div class="card-actions">
-                        <button class="action-btn download-btn" onclick="downloadDocument('signup')">
-                            <i class="fas fa-download"></i> Download PDF
+                        <button class="action-btn register-btn" onclick="window.location.href='member.html#membership-card'">
+                            <i class="fas fa-user-plus"></i> Register as Member
                         </button>
                     </div>
                 </div>
@@ -250,19 +255,8 @@
                         <p class="card-description">Annual financial statements and reports</p>
                     </div>
                     <div class="card-actions">
-                        <button class="action-btn dropdown-btn" onclick="toggleDropdown('financials')">
-                            <i class="fas fa-chevron-down"></i> Select Year
-                        </button>
-                    </div>
-                    <div class="dropdown-menu" id="financials-dropdown">
-                        <button class="dropdown-item" onclick="downloadDocument('financials-2024')">
-                            <i class="fas fa-file-pdf"></i> 2024 Financial Report
-                        </button>
-                        <button class="dropdown-item" onclick="downloadDocument('financials-2023')">
-                            <i class="fas fa-file-pdf"></i> 2023 Financial Report
-                        </button>
-                        <button class="dropdown-item" onclick="downloadDocument('financials-2022')">
-                            <i class="fas fa-file-pdf"></i> 2022 Financial Report
+                        <button class="action-btn dropdown-btn" onclick="showMembershipConfirm('financials')">
+                            <i class="fas fa-file-alt"></i> Access Financials
                         </button>
                     </div>
                 </div>
@@ -275,19 +269,8 @@
                         <p class="card-description">Annual General Meeting minutes and resolutions</p>
                     </div>
                     <div class="card-actions">
-                        <button class="action-btn dropdown-btn" onclick="toggleDropdown('agm')">
-                            <i class="fas fa-chevron-down"></i> Select Year
-                        </button>
-                    </div>
-                    <div class="dropdown-menu" id="agm-dropdown">
-                        <button class="dropdown-item" onclick="downloadDocument('agm-2024')">
-                            <i class="fas fa-file-pdf"></i> 2024 AGM Minutes
-                        </button>
-                        <button class="dropdown-item" onclick="downloadDocument('agm-2023')">
-                            <i class="fas fa-file-pdf"></i> 2023 AGM Minutes
-                        </button>
-                        <button class="dropdown-item" onclick="downloadDocument('agm-2022')">
-                            <i class="fas fa-file-pdf"></i> 2022 AGM Minutes
+                        <button class="action-btn dropdown-btn" onclick="showMembershipConfirm('agm')">
+                            <i class="fas fa-file-alt"></i> Access AGM Minutes
                         </button>
                     </div>
                 </div>
@@ -308,6 +291,7 @@
             
             <div class="document-content">
                 <div class="privacy-document">
+                    <!-- Your existing privacy document content here -->
                     <h1>URBAN SWARAS RUNNING CLUB</h1>
                     <h2>DATA PRIVACY NOTICE</h2>
                     
@@ -377,7 +361,16 @@
             <i class="fas fa-check-circle"></i>
             <span>Download started successfully!</span>
         </div>
-    </div> 
+    </div>
+
+    <!-- Membership Confirmation Modal -->
+    <div id="membershipModal" class="modal">
+        <div class="modal-content">
+            <h3>Document Access Restricted</h3>
+            <p>This document is only available to club members and officials. Please contact the club secretary at <a href="mailto:info@urbanswaras.co.ke" class="modal-email">info@urbanswaras.co.ke</a> to request access.</p>
+            <button class="btn-close" onclick="closeMembershipModal()">Close</button>
+        </div>
+    </div>
     
 <footer class="site-footer">
     <div class="footer-container">
