@@ -291,12 +291,12 @@ document.addEventListener('DOMContentLoaded', function() {
             quarterly: {
                 title: 'Quarterly Membership',
                 price: 'Ksh 2,800',
-                paymentUrl: 'https://www.urbanswaras.co.ke/products/fb8f95cce3/2971724000000824014'
+                paymentUrl: 'https://www.urbanswaras.co.ke/products/f55e57fb75/2971724000003048728'
             },
             annual: {
                 title: 'Annual Membership',
                 price: 'Ksh 8,200',
-                paymentUrl: 'https://www.urbanswaras.co.ke/products/a0e3dea7e8/2971724000000824023'
+                paymentUrl: 'https://www.urbanswaras.co.ke/products/g65a202d9d/2971724000003048737'
             },
             guest: {
                 title: 'Guest Runner',
